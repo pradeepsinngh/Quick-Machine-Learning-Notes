@@ -20,7 +20,7 @@ machine learning models can be broadly categorized into four groups
 3. Reinforcement Learning
 4. Deep Learning
 
-machine learning systems consist of three parts:
+Machine learning systems consist of three parts:
 1. **Model** - this is what we as machine learning engineers want to build, this is the system that gives us some output
 2. **Parameters** - consisting of parameters and hyperparameters; these effect the model's output
 3. **Learner** - this is where the magic happens, this is where the parameters are adjusted
