@@ -33,8 +33,6 @@ Which machine learning model you choose depends on the type of data that you hav
 
 Before getting into training, I think it is important to note how training data is fed into a machine learning model. Typically our data is arrange into matrices where each row is a single **instance** or example observations, and each column is a **feature** or variable. Therefore, you can think of a matrix as many instances arranged in rows.
 
-###### add image for clarity
-
 When we train a model, we are actually feeding this matrix row by row into model.
 
 Think of your model as a hypothesis (a function) which maps input features (or independent variables) to some target feature (or dependent variable). There are two main types of relationships between the independent variables and the dependent variable: **linear** and **non-linear**.
