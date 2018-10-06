@@ -2,7 +2,7 @@
 
 *"A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance tasks in T, as measured by P, improves with experience E."* - Tom Mitchell
 
-### How does one teach a computer program to learn from experience E with respect to some class of tasks T and measure its performance P?
+#### How does one teach a computer program to learn from experience E with respect to some class of tasks T and measure its performance P?
 
 We refer to such such programs that learn from experience as machine learning models: we create these models by feeding training data into a learning algorithm.
 
