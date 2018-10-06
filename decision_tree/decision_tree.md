@@ -62,9 +62,17 @@ To perform a split:
 
 Our decision tree's splitting is greedy. This means that it exhaustively searches the dataset for the best possible split and considers only the split with the best immediate result.
 
+#### Regularization in Descision tree?
+Regularization in descision tree is controlled by hyperparameters -- 
+1. the max depth of descision tree. the default value is NONE is scikit learn, which means unlimited.
+2. min samples samples split - the min no of samples each node must have before it can be split.
+3. min samples leaf - the min no of samples each leaf node must have
+
+
 #### What is a Stopping Criterion?
 
 #### What is Pruning?
+Pruning is deleting unnecessary nodes. A node whose children nodes are all leaf nodes is considered unnecessary if the purity improvement it provides is not statistically significant. standard test such as Chi-squared test are used to estimate the probablity that the improvement is purely the result of chance (which is our null hypothesis). If the prob, called p-value is higher than a given threshold (typically 5%), then the nodes is considered unnecessary and its children are delted. Pruning continues till the time all unnecessary nodes are not deleted.
 
 #### <How to evaluate performance of Decision Tree
 
