@@ -1,6 +1,8 @@
 # Decision Tree (CART)
 #### Hello, Decision Tree
-A decision tree, also referred to as Classification and Regression Tree (CART), is a powerful algorithm that can beautifully illustrate how an algorithm learns from data. A decision tree is essentially a binary tree which finds optimal splits in features in order to classify or predict continuous values. So what exactly is meant by finding optimal splits?
+A decision tree, also referred to as Classification and Regression Tree (CART), is a powerful algorithm that can beautifully illustrate how an algorithm learns from data. A decision tree is essentially a binary tree which finds optimal splits in features in order to classify or predict continuous values. 
+
+One of the many qualities of descision tree is that they require very little data preparation. In particular, they don't require feature scaling or centering at all.
 
 Below are links to see a decision tree in action
 
@@ -46,11 +48,13 @@ A Gini score tells you how well a point in your data splits your total data into
 
 ###### note that gini impurity and gini coefficient are not the same thing
 
-#### <a name="entropy"></a>What is Entropy?
+#### What is Entropy?
+In ML, entropy is used as an impurity measure: a set's entropy is zero when it conatins instances of only one class.
 
-Measures impurity.
+#### So, should you use Gini impurity or entropy?
+The truth is it doesn't make a difeerence, most of the time you will end up with similar trees. Gini impurity is slightly faster to compute, so it is a good default. However, when they differ, Gini Impurity tends to isolate the most frequent class in its own branch of the tree, while entropy tends to produce slightly more balnced trees.
 
-#### <a name="split"></a>What is a Split?
+#### What is a Split?
 
 A split (in the dataset) involves one feature and one value for said feature that is used to divide the dataset into two groups?
 
@@ -61,7 +65,7 @@ To perform a split:
 4. repeat steps 1 - 3 for all possible splits
 5. keep the split value where cost is smallest
 
-#### <a name="greedy"></a>What is Greedy Splitting?
+#### What is Greedy Splitting?
 
 Our decision tree's splitting is greedy. This means that it exhaustively searches the dataset for the best possible split and considers only the split with the best immediate result.
 
