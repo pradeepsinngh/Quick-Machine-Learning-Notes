@@ -1,5 +1,5 @@
 # Decision Tree (CART)
-#### Hello, Decision Tree
+#### 
 A decision tree, also referred to as Classification and Regression Tree (CART), is a powerful algorithm that can beautifully illustrate how an algorithm learns from data. A decision tree is essentially a binary tree which finds optimal splits in features in order to classify or predict continuous values. 
 
 One of the many qualities of descision tree is that they require very little data preparation. In particular, they don't require feature scaling or centering at all.
@@ -79,6 +79,9 @@ Pruning is deleting unnecessary nodes. A node whose children nodes are all leaf 
 #### Assumptions of Decision Tree
 
 #### Things to watch out for
+1. Descision tree loves orthogonal boundries (all splits are perpendicular to axis), which makes them sensitive to training set rotation. One way to limit this to use PCA, which often results in a better orientation of the training data.
+2. More generally, the main issue with Descision trees is that they are very sensitive to small variations in training data.
+
 
 #### Tips and Tricks
 
