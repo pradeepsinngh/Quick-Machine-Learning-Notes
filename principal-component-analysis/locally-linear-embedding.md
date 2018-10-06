@@ -12,9 +12,9 @@ It's an non-linear dimensionality reduction technique. It is a Manifold Learning
 
 
 ## Some other dimensionality reduction techniques:
-- ** t-Distributed Stochastic Neighbour Embedding (t-SNE)** 
+** t-Distributed Stochastic Neighbour Embedding (t-SNE)** 
 reduces dimensionality while trying to keep similar instances close and disimilar instances apart. mostly used to visualize clusters of instances in high-dimensional soace.
-- ** Linear Discrimant Analaysis ** 
+** Linear Discrimant Analaysis ** 
 1. is actually a classification algorithm, but during training it learns the most discriminative axes between the classes, and these axes can be used to define hyperplane onto which to project the data.
 2. benifit of LDA is that the projection will keep classes as far as possible, so LDA is a good tech to reduce dimensionality before running another classification algorithm such as an SVM classifier.
 - Isomap
