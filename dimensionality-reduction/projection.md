@@ -10,4 +10,4 @@ However, projection is not always the best approach to dimensioanlity reduction.
 
 Simply projecting onto a plan (eg: by dropping x3) would squash different layers of swiss roll together. however, what we want is to unroll the Swiss roll to obtain the 2D dataset.
 
-![Swiss Roll Unrolled(/images/swiss-roll-unroll.png)
+![Swiss Roll Unrolled(/images/swiss-roll-unrolled.png)
