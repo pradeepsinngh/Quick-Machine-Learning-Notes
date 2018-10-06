@@ -20,3 +20,8 @@ insights by visually detecting patterns, such as clusters.
 
 ## What should be your approach?
 In general,  you should try to train your model with orginal dataset before considering dimensionality reduction. If training is too slow, then only consider dimensionality reduction. In some case however, dimensionality reduction can help you filter out some noise and some unnecessary details and thus result in higher performace. But in general it won't; it will just speed up training.
+
+
+## Main approaches in Dimensionality Reduction:
+1. Projection
+2. Manifold Learning
