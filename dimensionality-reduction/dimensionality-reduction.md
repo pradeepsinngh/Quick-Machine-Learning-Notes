@@ -6,6 +6,10 @@ It is often possible to reduce the number of features considerably, turning an i
 
 Consider MNIST dataset, all the images in MNSIT have white pixels on the border (as subject is centered), so we can completely drop these pixels as they dont carry any information. Also, two neighbouring pixels are often highly correlated: you can merge these two pixels into a single pixel (eg, by taking the mean of the two pixel intensities), you will not lose much information.
 
+### Dimensionality reduction for Visualization:
+Apart from speeding up training, dimensionality reduction is also used for data visualization. Reducing the number of dimensions down to two (or three) makes it possible to plot a high-dimensional training set and often gain some important 
+insights by visually detecting patterns, such as clusters.
+
 ## Limitations of dimensionality reduction:
 
 ### Does reducing dimension leads to lose of infomrtaion?
