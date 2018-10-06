@@ -6,7 +6,7 @@
 
 We refer to such such programs that learn from experience as machine learning models: we create these models by feeding training data into a learning algorithm.
 
-In order to do machine learning we need data, lots and lots of data. Data (at least in [supervised learning](https://github.com/jimmychimmyy/machine_learning_notes/blob/master/ssupervised_learning.md)) gives us two variables: x and y, where x is the input(s) to our machine learning problem and y is the output.
+In order to do machine learning we need data, lots and lots of data. Data (at least in supervised learning) gives us two variables: x and y, where x is the input(s) to our machine learning problem and y is the output.
 
 One way to understand machine learning is to think of it as searching for a function such that `f(x) = y` (**target function**). Since we do not know the form of `f(x)`, we try to find a hypothesis function `h(x)` that best approximates `f(x)` such that `h(x) ≈ f(x) = y`.
 
@@ -26,8 +26,6 @@ Machine learning systems consist of three parts:
 3. **Learner** - this is where the magic happens, this is where the parameters are adjusted
 
 Which machine learning model you choose depends on the type of data that you have. There are two main types of data: **labeled** and **unlabeled**. When you have labeled data, you use supervised learning. When you have unlabeled data, you use unsupervised learning.
-
-###### Something about labeled data
 
 #### How does learning from experience E work?
 
