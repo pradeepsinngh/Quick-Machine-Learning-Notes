@@ -4,11 +4,6 @@ A decision tree, also referred to as Classification and Regression Tree (CART), 
 
 One of the many qualities of descision tree is that they require very little data preparation. In particular, they don't require feature scaling or centering at all.
 
-Below are links to see a decision tree in action
-
-* [from scratch](https://github.com/jimmychimmyy/machine_learning_notes/blob/master/decision_tree/decision_tree.ipynb)
-* [using sklearn]()
-
 #### How does it work?
 
 A decision tree contains 2 main elements: nodes and edges.
@@ -34,13 +29,11 @@ Our job, when creating a decision tree, is to figure out what features to use in
 * Decision Tree Depth
 * Number of Random Splits per Node
 
-#### <a name="cost"></a>Cost Function
+#### Cost Function
 
 We will be using the [Gini Index](#gini) as the cost function for decision trees.
 
-###### add image for clarification
-
-#### <a name="gini"></a>What is Gini Index (impurity)?
+#### What is Gini Index (impurity)?
 
 Used to minimize probability of misclassification.
 
@@ -69,17 +62,17 @@ To perform a split:
 
 Our decision tree's splitting is greedy. This means that it exhaustively searches the dataset for the best possible split and considers only the split with the best immediate result.
 
-#### <a name="stopping"></a>What is a Stopping Criterion?
+#### What is a Stopping Criterion?
 
-#### <a name="pruning"></a>What is Pruning?
+#### What is Pruning?
 
-#### <a name="evaluate"></a>How to evaluate performance of Decision Tree
+#### <How to evaluate performance of Decision Tree
 
-#### <a name="assumptions"></a>Assumptions of Decision Tree
+#### Assumptions of Decision Tree
 
-#### <a name="watchout"></a>Things to watch out for
+#### Things to watch out for
 
-#### <a name="tips"></a>Tips and Tricks
+#### Tips and Tricks
 
 #### Sources
 1. https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/
