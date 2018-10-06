@@ -29,4 +29,10 @@ Another approach would be to, plot the explained variance as a function of the n
 ### Explained Variance Ratio of each PC:
 -- proprotion of the datasets variance that lies along the axis of each principal component.
 
+### Limitations:
+PCA requires the whole training set to fit in the memory in order for SVD algorithm to run. So, if your dataset is huge, you won't be able to use PCA. Or else use Incremental PCA.
+
+### Incremental PCA
+split the training set into mini-batches and feed an IPCA algorithms one mini-batch at a time.
+
 
