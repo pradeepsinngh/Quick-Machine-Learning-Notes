@@ -38,6 +38,21 @@ The difference reflects the approach of statistics versus data science: accounti
 
 ### Weighted Mean: 
 there are 2 main reasons -- 
- - Some values are intrinsically more variable than others, and highly variable observations are given a lower weight. For example, if we are taking the average from multiple sensors and one of the sensors is less accurate, then we might downweight the data from that sensor.
+- weighted mean is robust to outliers.
+- Some values are intrinsically more variable than others, and highly variable observations are given a lower weight. For example, if we are taking the average from multiple sensors and one of the sensors is less accurate, then we might downweight the data from that sensor.
 - The data collected does not equally represent the different groups that we are interested in measuring. For example, because of the way an online experiment was conducted, we may not have a set of data that accurately reflects all groups in the user base. To correct that, we can give a higher weight to the values from the groups that were underrepresented.
+
+### Median and Robust Estimates:
+
+- The median is referred to as a robust estimate of location since it is not influenced by outliers (extreme cases) that could skew the results. 
+
+**NOTE:** When outliers are the result of bad data, the mean will result in a poor estimate of location, while the median will be still be valid.
+
+### Trimmed Mean VS Median: What to use?
+The median is not the only robust estimate of location. In fact, a trimmed mean is widely used to avoid the influence of outliers. For example, trimming the bottom and top 10% (a common choice) of the data will provide protection against outliers in all but the smallest data sets. The trimmed mean can be thought of as a compromise between the median and the mean: it is robust to extreme values in the data, but uses more data to calculate the estimate for location.
+
+
+### Ket Ideas:
+1. The basic metric for location is the mean, but it can be sensitive to extreme values (outlier).
+2. Other metrics (median, trimmed mean) are more robust.
 
