@@ -1,4 +1,4 @@
-## Exploring Binary and Categorical Data
+## Exploring Binary and Categorical Data:
 
 For categorical data, simple proportions or percentages tell the story of the data.
 
@@ -29,3 +29,13 @@ charts as less visually informative.
 
 - A special type of categorical data is data in which the categories represent or can be mapped to discrete values on the same scale.
 - The expected value is really a form of weighted mean: it adds the ideas of future expectations and probability weights.
+
+
+## Key Ideas:
+
+1. Categorical data is typically summed up in proportions, and can be visualized in a bar chart.
+
+2. Categories might represent distinct things (apples and oranges, male and female), levels of a factor variable (low, medium, and high), or numeric data that has been binned.
+
+3. Expected value is the sum of values times their probability of occurrence, often used to sum up factor variable levels.
+
