@@ -52,7 +52,7 @@ there are 2 main reasons --
 The median is not the only robust estimate of location. In fact, a trimmed mean is widely used to avoid the influence of outliers. For example, trimming the bottom and top 10% (a common choice) of the data will provide protection against outliers in all but the smallest data sets. The trimmed mean can be thought of as a compromise between the median and the mean: it is robust to extreme values in the data, but uses more data to calculate the estimate for location.
 
 
-### Ket Ideas:
+### Key Ideas:
 1. The basic metric for location is the mean, but it can be sensitive to extreme values (outlier).
 2. Other metrics (median, trimmed mean) are more robust.
 
