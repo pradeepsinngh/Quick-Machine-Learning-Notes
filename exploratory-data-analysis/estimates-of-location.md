@@ -16,3 +16,15 @@ a “typical value” for each feature (variable): an estimate of where most of 
   - Synonyms : resistant
 - Outlier : A data value that is very different from most of the data.
   - Synonyms : extreme value
+
+
+**NOTE:** While the mean is easy to compute, it may not always be the best measure for a central value. For this reason, statisticians have developed several alternative estimates to the mean.
+
+## Metrics and Estimates:
+statisticians estimate, and data scientists measure.
+
+Statisticians often use the term estimates for values calculated from the data at hand, to draw a distinction between what we see from the data, and the theoretical true or exact state of affairs. 
+
+Data scientists are more likely to refer to such values as a metric. 
+
+The difference reflects the approach of statistics versus data science: accounting for uncertainty lies at the heart of the discipline of statistics, whereas concrete business or organizational objectives are the focus of data science.
