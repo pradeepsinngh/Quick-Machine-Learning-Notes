@@ -34,5 +34,18 @@ best-known estimates for variability are the variance and the standard deviation
    - standard deviation is preferred in statistics over the mean absolute deviation because working with squared values is 
    much more convenient than absolute values, especially for statistical models.
    
-   
+ ## Why we have n – 1 in the denominator in the variance formula, instead of n?  
  ## Degrees of Freedom, and n or n – 1?
+ - Why we have n – 1 in the denominator in the variance formula, instead of n, leading into the concept of degrees of freedom. 
+ - This distinction is not important since n is generally large enough that it won’t make much difference whether you divide by n or n – 1.
+ - But in case you are interested, **here is the story**. It is based on the premise that you want to make estimates about a population, based on a sample.
+ 
+ If you use the intuitive denominator of n in the variance formula, you will underestimate the true value of the variance and the standard deviation in the population. This is referred to as a biased estimate. However, if you divide by n – 1 instead of n, the standard deviation becomes an unbiased estimate.
+
+To fully explain why using n leads to a biased estimate involves the notion of degrees of freedom, which takes into account the number of constraints in computing an estimate. In this case, there are n – 1 degrees of freedom since there is one constraint: the standard deviation depends on calculating the sample mean. For many problems, data scientists do not need to worry about degrees of freedom, but there are cases where the concept is important (see “Choosing K”).
+
+### What to choose?
+- Neither the variance, the standard deviation, nor the mean absolute deviation is robust to outliers and extreme values.
+- The variance and standard deviation are especially sensitive to outliers since they are based on the squared deviations.
+
+- A robust estimate of variability is the **median absolute deviation from the median or MAD**:
