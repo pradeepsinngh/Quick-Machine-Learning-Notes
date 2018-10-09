@@ -54,5 +54,3 @@ Information about samples is observed, and information about large populations i
 2. Bias occurs when measurements or observations are systematically in error because they are not representative of the full population.
 
 3. Data quality is often more important than data quantity, and random sampling can reduce bias and facilitate quality improvement that would be prohibitively expensive.
-
-
