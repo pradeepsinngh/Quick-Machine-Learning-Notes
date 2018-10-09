@@ -2,10 +2,10 @@
 
 For categorical data, simple proportions or percentages tell the story of the data.
 
-Mode : The most commonly occurring category or value in a data set.
-Expected value : When the categories can be associated with a numeric value, this gives an average value based on a category’s probability of occurrence.
-Bar charts : The frequency or proportion for each category plotted as bars.
-Pie charts : The frequency or proportion for each category plotted as wedges in a pie.
+1. Mode : The most commonly occurring category or value in a data set.
+2. Expected value : When the categories can be associated with a numeric value, this gives an average value based on a category’s probability of occurrence.
+3. Bar charts : The frequency or proportion for each category plotted as bars.
+4. Pie charts : The frequency or proportion for each category plotted as wedges in a pie.
 
 ### Bar charts:
 Bar charts are a common visual tool for displaying a single categorical variable, often seen in the popular press. Categories 
@@ -18,4 +18,10 @@ the bars are shown separate from one another.
 
 ### Pie Charts:
 Pie charts are an alternative to bar charts, although statisticians and data visualization experts generally eschew pie 
-charts as less visually informative
+charts as less visually informative.
+
+## Numerical Data as Categorical Data
+- In “Frequency Table and Histograms”, we looked at frequency tables based on binning the data. This implicitly converts the numeric data to an ordered factor. In this sense, histograms and bar charts are similar, except that the categories on the x-axis in the bar chart are not ordered. 
+
+- Converting numeric data to categorical data is an important and widely used step in data analysis since it reduces the complexity (and size) of the data. This aids in the discovery of relationships between features, particularly at the initial stages of an analysis.
+
