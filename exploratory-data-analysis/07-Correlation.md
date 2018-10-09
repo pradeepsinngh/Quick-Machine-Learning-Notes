@@ -10,6 +10,7 @@ between predictors and a target variable.
 1. Correlation coefficient : A metric that measures the extent to which numeric variables are associated with one another (ranges from –1 to +1) and 0 indicate no correlation.
 2. Correlation matrix : A table where the variables are shown on both rows and columns, and the cell values are the correlations between the variables.
 3. Scatterplot : A plot in which the x-axis is the value of one variable, and the y-axis the value of another.
+   - Scatterplots are fine when there is a relatively small number of data values. 
 
 **NOTE:** Like the mean and standard deviation, the correlation coefficient is sensitive to outliers in the data.
 
