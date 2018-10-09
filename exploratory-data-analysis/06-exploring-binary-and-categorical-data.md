@@ -25,3 +25,7 @@ charts as less visually informative.
 
 - Converting numeric data to categorical data is an important and widely used step in data analysis since it reduces the complexity (and size) of the data. This aids in the discovery of relationships between features, particularly at the initial stages of an analysis.
 
+### Expected Value:
+
+- A special type of categorical data is data in which the categories represent or can be mapped to discrete values on the same scale.
+- The expected value is really a form of weighted mean: it adds the ideas of future expectations and probability weights.
