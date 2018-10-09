@@ -12,7 +12,13 @@
 - The median is shown by the horizontal line in the box. 
 - The dashed lines, referred to as whiskers, extend from the top and bottom to indicate the range for the bulk of the data. 
 
-2. Frequency table : A tally of the count of numeric data values that fall into a set of intervals (bins).
-3. Histogram : A plot of the frequency table with the bins on the x-axis and the count (or proportion) on the y-axis.
-4. Density plot : A smoothed version of the histogram, often based on a kernal density estimate.
+2. **Frequency table** : A tally of the count of numeric data values that fall into a set of intervals (bins).
+
+
+
+3. **Histogram** : A plot of the frequency table with the bins on the x-axis and the count (or proportion) on the y-axis.
+
+
+
+4. **Density plot** : A smoothed version of the histogram, often based on a kernal density estimate.
 
