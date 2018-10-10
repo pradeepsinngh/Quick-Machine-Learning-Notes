@@ -33,6 +33,6 @@ It says that the means drawn from multiple samples will resemble the familiar be
 
 
 **NOTE:--** 
-###Standard Deviation versus Standard Error
+### Standard Deviation versus Standard Error
 Do not confuse standard deviation (which measures the variability of individual data points) with standard error (which measures the variability of a sample metric).
 
