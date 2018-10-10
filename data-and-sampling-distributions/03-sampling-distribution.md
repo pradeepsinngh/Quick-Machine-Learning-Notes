@@ -26,8 +26,11 @@ It says that the means drawn from multiple samples will resemble the familiar be
 
 ## Standard Error
 1.The standard error is a single metric that sums up the variability in the sampling distribution for a statistic.
+
 2. The standard error can be estimated using a statistic based on the standard deviation s of the sample values, and the sample size n: SE = s/sqrt(n)
+
 3. As the sample size increases, the standard error decreases. 
+
 4. The relationship between standard error and sample size is sometimes referred to as the square-root of n rule: in order to reduce the standard error by a factor of 2, the sample size must be increased by a factor of 4.
 
 
