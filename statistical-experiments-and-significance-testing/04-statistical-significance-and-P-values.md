@@ -13,5 +13,13 @@ what chance might produce. If the result is beyond the realm of chance variation
 - Type 2 error : Mistakenly concluding an effect is due to chance (when it is real).
 
 
+**Key Ideas**
+- Significance tests are used to determine whether an observed effect is within the range of chance variation for a null hypothesis model.
+- The p-value is the probability that results as extreme as the observed results might occur, given a null hypothesis model.
+- The alpha value is the threshold of “unusualness” in a null hypothesis chance model.
+- Significance testing has been much more relevant for formal reporting of research than for data science (but has been fading recently, even for the former).
+
+
+
 
 
