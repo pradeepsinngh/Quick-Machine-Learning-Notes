@@ -24,5 +24,5 @@ The bootstrap is used to assess the reliability of an estimate. Permutation test
   - Whatever statistic or estimate was calculated for the original samples (e.g., difference in group proportions), calculate it now for the resamples, and record; this constitutes one permutation iteration.
   - Repeat the previous steps R times to yield a permutation distribution of the test statistic.
   - Now go back to the observed difference between groups and compare it to the set of permuted differences. 
-  - If the observed difference lies well within the set of permuted differences, then we have not proven anything—the observed difference is within the range of what chance might produce. 
+  - If the observed difference lies well within the set of permuted differences, then we have not proven anything.
   - However, if the observed difference lies outside most of the permutation distribution, then we conclude that chance is not responsible. In technical terms, the difference is statistically significant.
