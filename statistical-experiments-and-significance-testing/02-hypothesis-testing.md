@@ -23,3 +23,26 @@ In a properly designed A/B test, you collect data on treatments A and B in such 
   - A true difference between A and B
 
 A statistical hypothesis test is analysis of an A/B test, or any randomized experiment, to assess whether random chance is a reasonable explanation for the observed difference between groups A and B.
+
+## Basic philosophy behid hypothesis test?
+Hypothesis tests use the following logic: *Given the human tendency to react to unusual but random behavior and interpret it as something meaningful and real, in our experiments we will require proof that the difference between groups is more extreme than what chance might reasonably produce.*
+
+
+## The Null Hypothesis :
+In hypothesis testing we have a baseline assumption that the treatments are equivalent, and any difference between the groups is due to chance. This baseline assumption is termed the **null hypothesis**. 
+
+Our hope is then that we can, in fact, prove the null hypothesis wrong, and show that the outcomes for groups A and B are more different than what chance might produce.
+
+One way to do this is via a resampling permutation procedure, in which we shuffle together the results from groups A and B and then repeatedly deal out the data in groups of similar sizes, then observe how often we get a difference as extreme as the observed difference.
+
+## Alternative Hypothesis :
+Hypothesis tests by their nature involve not just a null hypothesis, but also an offsetting alternative hypothesis. Here are some examples:
+
+    Null = “no difference between the means of group A and group B,” alternative = “A is different from B” (could be bigger or smaller)
+
+    Null = “A less-than-or-equal-to B,” alternative = “B > A”
+
+    Null = “B is not X% greater than A,” alternative = “B is X% greater than A”
+
+Taken together, the null and alternative hypotheses must account for all possibilities. The nature of the null hypothesis determines the structure of the hypothesis test.
+
