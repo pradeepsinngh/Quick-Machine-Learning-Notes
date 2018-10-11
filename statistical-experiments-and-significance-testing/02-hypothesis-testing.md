@@ -57,7 +57,7 @@ If you want a hypothesis test to protect you from being fooled by chance in eith
 A one-tail hypothesis test often fits the nature of A/B decision making, in which a decision is required and one option is typically assigned “default” status unless the other proves better.
 
 **Key Ideas**:
-A null hypothesis is a logical construct embodying the notion that nothing special has happened, and any effect you observe is due to random chance.
+- A null hypothesis is a logical construct embodying the notion that nothing special has happened, and any effect you observe is due to random chance.
 
-The hypothesis test assumes that the null hypothesis is true, creates a “null model” (a probability model), and tests whether the effect you observe is a reasonable outcome of that model.
+- The hypothesis test assumes that the null hypothesis is true, creates a “null model” (a probability model), and tests whether the effect you observe is a reasonable outcome of that model.
 
