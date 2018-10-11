@@ -4,7 +4,8 @@
 In order to confirm or reject a hypothesis.
 
 ## Statistical Inference Pipeline:
-```Formulate Hypothesis > Design Experiment > Collect Data > Inference/ Conclusion
+```
+Formulate Hypothesis > Design Experiment > Collect Data > Inference/ Conclusion
 ```
 
 - **Step 1:** This process starts with a hypothesis (“drug A is better than the existing standard drug,” “price A is more profitable than 
