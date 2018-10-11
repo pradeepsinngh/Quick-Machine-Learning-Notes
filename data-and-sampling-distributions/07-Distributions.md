@@ -14,7 +14,7 @@
 - Distributions of sample means are typically shaped like a t-distribution, and there is a family of t-distributions that differ depending on how large the sample is. The larger the sample, the more normally shaped the t-distribution becomes.
 
 **Note**
-###What do data scientists need to know about the t-distribution and the central limit theorem? 
+### What do data scientists need to know about the t-distribution and the central limit theorem? 
 Not a whole lot. These distributions are used in classical statistical inference, but are not as central to the purposes of data science. Understanding and quantifying uncertainty and variation are important to data scientists, but empirical bootstrap sampling can answer most questions about sampling error. However, data scientists will routinely encounter t-statistics in output from statistical software and statistical procedures in R, for example in A-B tests and regressions, so familiarity with its purpose is helpful.
 
 **Key Ideas**
