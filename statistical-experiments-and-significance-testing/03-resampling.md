@@ -37,3 +37,12 @@ There are two variants of the permutation test:
 In an exhaustive permutation test, instead of just randomly shuffling and dividing the data, we actually figure out all the possible ways it could be divided. This is practical only for relatively small sample sizes. With a large number of repeated shufflings, the random permutation test results approximate those of the exhaustive permutation test, and approach them in the limit. Exhaustive permutation tests are also sometimes called exact tests, due to their statistical property of guaranteeing that the null model will not test as “significant” more than the alpha level of the test.
 
 In a bootstrap permutation test, the draws outlined in the random permutation test are made with replacement instead of without replacement. In this way the resampling procedure models not just the random element in the assignment of treatment to subject, but also the random element in the selection of subjects from a population.
+
+
+**KEY IDEAS**
+- In a permutation test, multiple samples are combined, then shuffled.
+- The shuffled values are then divided into resamples, and the statistic of interest is calculated.
+- This process is then repeated, and the resampled statistic is tabulated.
+- Comparing the observed value of the statistic to the resampled distribution allows you to judge whether an observed difference between samples might occur by chance.
+
+
