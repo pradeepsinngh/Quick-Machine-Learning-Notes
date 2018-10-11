@@ -14,3 +14,10 @@
 - A QQ-Plot is used to visually determine how close a sample is to the normal distribution. 
 - The QQ-Plot orders the z-scores from low to high, and plots each value’s z-score on the y-axis; the x-axis is the corresponding quantile of a normal distribution for that value’s rank. 
 - If the points roughly fall on the diagonal line, then the sample distribution can be considered close to normal.
+
+
+**Key Ideas**
+
+- The normal distribution was essential to the historical development of statistics, as it permitted mathematical approximation of uncertainty and variability.
+- While raw data is typically not normally distributed, errors often are, as are averages and totals in large samples.
+- To convert data to z-scores, you subtract the mean of the data and divide by the standard deviation; you can then compare the data to a normal distribution.
