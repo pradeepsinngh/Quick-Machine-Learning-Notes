@@ -1,7 +1,6 @@
 ## Resampling
 
-Resampling in statistics means to repeatedly sample values from observed data, with a general goal of assessing random 
-variability in a statistic.
+Resampling in statistics means to repeatedly sample values from observed data, with a general goal of assessing random variability in a statistic.
 
 There are two main types of resampling procedures: 
 - the bootstrap and 
@@ -26,3 +25,15 @@ The bootstrap is used to assess the reliability of an estimate. Permutation test
   - Now go back to the observed difference between groups and compare it to the set of permuted differences. 
   - If the observed difference lies well within the set of permuted differences, then we have not proven anything.
   - However, if the observed difference lies outside most of the permutation distribution, then we conclude that chance is not responsible. In technical terms, the difference is statistically significant.
+  
+  
+
+## Exhaustive and Bootstrap Permutation Test
+
+There are two variants of the permutation test:
+- An exhaustive permutation test
+- A bootstrap permutation test
+
+In an exhaustive permutation test, instead of just randomly shuffling and dividing the data, we actually figure out all the possible ways it could be divided. This is practical only for relatively small sample sizes. With a large number of repeated shufflings, the random permutation test results approximate those of the exhaustive permutation test, and approach them in the limit. Exhaustive permutation tests are also sometimes called exact tests, due to their statistical property of guaranteeing that the null model will not test as “significant” more than the alpha level of the test.
+
+In a bootstrap permutation test, the draws outlined in the random permutation test are made with replacement instead of without replacement. In this way the resampling procedure models not just the random element in the assignment of treatment to subject, but also the random element in the selection of subjects from a population.
