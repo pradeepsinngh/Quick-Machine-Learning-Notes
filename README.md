@@ -11,8 +11,7 @@ One way to understand machine learning is to think of it as searching for a func
 **Model == Hypothesis**
 
 #### What are the different types of machine learning algorithms?
-
-machine learning models can be broadly categorized into four groups
+Machine learning models can be broadly categorized into four groups:-
 1. Supervised Learning
 2. Unsupervised Learning
 3. Reinforcement Learning
