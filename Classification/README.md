@@ -36,6 +36,9 @@ Evaluating a classifier is always tricker than regressor. There are following pe
           [0,  4344]])
    ```
 
-   
+**Precision:** Accuracy of the positive prediction of the classifier. 
+```Precision  = TP/ (TP + FP)```
+**Recall:** Also called Sensitivity OR True Positive Rate. This is the ratio of positive instances that are correctly detected by the classifier.
+```Recall = TP / (TP + FN)```
  
    
