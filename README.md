@@ -45,9 +45,7 @@ However, you must be careful in choosing your evaluation metric. The classificat
 Therefore in this case, another evaluation metric, a confusion matrix can be used to determine the performance of our model.
 
 #### What is weight and bias?
-Weights and biases are the parameters that your model "learn".
-
-Weights and biases are randomachine learningy initialize before training and are adjusted during training to minimize the cost function.
+Weights and biases are the parameters that your model "learn". Weights and biases are randomly initialized before training and are adjusted during training to minimize the cost function.
 
 #### What is a Cost Function? (a.k.a error or loss)
 
