@@ -40,10 +40,10 @@ Most machine learning algorithms perfer to work with numbers, so our first appro
       ```
 
 
-3. ** Custom Transformers:**
+3. **Custom Transformers:**
 You need to write your own transformers for tasks such as custom cleanup operations or combining specific attributes.
 
-4. ** Feature Scaling: **
+4. **Feature Scaling:**
 - ML algorithms doesn't work well when the I/P numerical attributes have very different scales.
 - **NOTE:** Scaling the target values is generally not required.
 - There are two common ways to get all attributes to have same scale: *min-max scaling* and *standardization*.
