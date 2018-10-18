@@ -11,7 +11,7 @@
    - So, if you want to classify digits 0 to 9, you need 10 binary classifiers.
    
  2. One vs One:
-   - Train a binary classifier for every pair classes. So, if you clasees 0 to 9, you need 1 classifier to classify 0s and 1s, one to classify 0s and 2s, one to classify, 0s and 3s,...and one to classify 1s and 2s,..etc.
-   - So, if you N classes (10 classes: 0 to 9) you will need N * (N-1)/2 binary classifiers.
-   - So, if you have 10 classes: 0 to 9, you will need 45 binary classifiers.
+    - Train a binary classifier for every pair classes. So, if you clasees 0 to 9, you need 1 classifier to classify 0s and 1s, one to classify 0s and 2s, one to classify, 0s and 3s,...and one to classify 1s and 2s,..etc.
+    - So, if you N classes (10 classes: 0 to 9) you will need N * (N-1)/2 binary classifiers.
+    - So, if you have 10 classes: 0 to 9, you will need 45 binary classifiers.
    
