@@ -37,11 +37,45 @@ Evaluating a classifier is always tricker than regressor. There are following pe
    ```
 
 **Precision:** Accuracy of the positive prediction of the classifier. 
-
-```Precision  = TP/ (TP + FP)```
+  - sklearn fun -- ```precision_score()```
+  - Formula: ```Precision  = TP/ (TP + FP)```
 
 **Recall:** Also called Sensitivity OR True Positive Rate. This is the ratio of positive instances that are correctly detected by the classifier.
-
-```Recall = TP / (TP + FN)```
+  - sklearn fun -- ```recall_score()```
+  - Formula: ```Recall= TP/ (TP + FN)```
+  
+**F1 Scoare:** It is often convenient to combine precision and recall into a single metric called F1 scoare.
+  - F1 score is the harmonic mean of precision and recall. 
+  - Why harmonic mean? Regular mean treates all values equally. the harmonic mean gives much more important to low values. As a result classifier will only get a high F1 score if both recall and precision are high.
+  - Formula: ```F1 == 2/ (1/precision + 1/recall)) == TP / (TP + (FN + FP)/2)```
+  - F1 score favors classifiers that have similar precision and recall. This is not what you want, in osme case you care more about: precision and in other cases your care about recall.
+  
+  - **Precision/Recall tradeoff** Increasing precision reduces recall, and vice versa, this is called precision/recall tradeoff.
+  - Increasing threshold reduces recall and increases precision.
+  - Conversely, lowering threshold increases recall and reduces precision.
+  
+  #### How to select good precision/recall tradeoff?
+  Plot precision directly against recall
+  
+  
+  
+3. **ROC Curve:** Receiver operating characteristic 
+   - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
    
