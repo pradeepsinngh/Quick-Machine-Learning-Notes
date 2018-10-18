@@ -60,7 +60,20 @@ Evaluating a classifier is always tricker than regressor. There are following pe
   
   
 3. **ROC Curve:** Receiver operating characteristic 
-   - 
+   - It is very similar to precision/recall curve
+   - But instead of of plotting precision vs recall, the ROC curve plots the true positive rate (TPR) (recall) against the false positive rate (FPR).
+   - FPR is the ratio of negative instances that are incorrectly classified as positive.
+   - FPR is equal to one minus the true negative rate (TNR).
+   - TNR is the ratio of negative instances that are correctly classified as negative. It is also called specificity.
+   - Hence, the ROC curve plots sensitivity (recall) vs 1 - specificity.
+   - To plot ROC curver use sklearn ```roc_curve()```.
+   
+   **TRADEOFF:**
+   - Higher the recall (TPR), the more false positive (FPR) the classifier produces.
+   - A good classifier stays as far away from diagonal line as possible - in the/ towards the top-left corner.
+   - One way to measure/ compare classifiers is to measure the area under the curver. A perfect classifier will have ROC area under the curve equal to 1, whereas poor/ random classifier will have area under the ROC curve equal to 0.5.
+   - Sklearn function to computer area under the curve: ```roc_auc_score()```
+   
  
  
  
