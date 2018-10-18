@@ -16,3 +16,4 @@
 - The higher the norm index, the more it focuses on larger values and neglects the small ones. 
 - This is why RMSE is more sensitive to outliers then MAE.
 -  But, when outliers are exponentially rare (like a bell-shaped curve), the RMSE performs very well and is generally preferred.
+
