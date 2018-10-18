@@ -35,11 +35,6 @@ When we train a model, we are actually feeding this matrix row by row into model
 
 Think of your model as a hypothesis (a function) which maps input features (or independent variables) to some target feature (or dependent variable). There are two main types of relationships between the independent variables and the dependent variable: **linear** and **non-linear**.
 
-###### something about linear and non-linear relationships
-
-#### How can I tell if my data is linear or non-linear?
-
-###### One method is to use train a perceptron classifier, which will converge if the data is linearly separable. In other words, if it gives 100% accuracy that means your data is linear?
 
 #### What is the performance measure P and how is it measured?
 
@@ -50,7 +45,6 @@ However, you must be careful in choosing your evaluation metric. The classificat
 Therefore in this case, another evaluation metric, a confusion matrix can be used to determine the performance of our model.
 
 #### What is weight and bias?
-
 Weights and biases are the parameters that your model "learn".
 
 Weights and biases are randomachine learningy initialize before training and are adjusted during training to minimize the cost function.
@@ -59,11 +53,6 @@ Weights and biases are randomachine learningy initialize before training and are
 
 A cost function measures how close our predicted values are to the actual values. We want to minimize the cost function to minimize errors.
 
-###### need to do more research on cost function
-
-#### What is Optimization?
-
-
 
 #### What is the process of applying machine learning?
 1. Define the problem
@@ -71,6 +60,31 @@ A cost function measures how close our predicted values are to the actual values
 3. Spot check algorithms
 4. Improve results
 5. Present results
+
+#### Main Challenges in Machine Learning?
+1. Insufficient Quantity of Training Data
+2. Nonrepresentative Training Data 
+   - eg: because of sampling bias
+3. Poor-Quality Data 
+   - eg: outliers, missing features/ values, incorrect features
+4. Irrelevant Features
+5. Overfitting/ underfitting the training data
+   - too complex model relative to amount and noisiness of the training data.
+   
+ #### How to avoid overfitting?
+ 1. Reduce the complexity of your model (simplfy your model)
+    - Use linear model rather than higher degree polynomical model
+    - reduce number of attributes
+    - constrain the mode l, regularization,
+ 2. Gather more training data
+ 3. Remove noise in data (fill missing values, fix data errors, remove outliers)
+
+ #### How to avoid underfitting?
+ It occurs when model is too simple to learn the underlying structure of the data,
+ 1. selecting more powerful model, with more prameters.
+ 2. feature engineering - feeding better features to learning algorithms.
+ 3. Reduce the constrain on the model, regularization hyperparameter.
+
 
 #### Sources
 1. https://machinelearningmastery.com
