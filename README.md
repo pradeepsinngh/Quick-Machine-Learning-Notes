@@ -44,6 +44,7 @@ Weights and biases are the parameters that your model "learn". Weights and biase
 #### What is a Cost Function? (a.k.a error or loss)
 A cost function measures how close our predicted values are to the actual values. We want to minimize the cost function to minimize errors.
 
+**NOTE:** Regression - predicitng values and Classification - predicting classes
 
 #### What is the process of applying machine learning?
 1. Define the problem
