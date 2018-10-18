@@ -20,19 +20,19 @@ imputer = Imputer(strategy="median")
 2. Handling Text and Categorical Attributes:
 Most machine learning algorithms perfer to work with numbers, so our first approach should always be to convert text/categorical data into numbers.
 
-1. Pandas ```factorize()``` method
-   - maps each category to a different integer.
+   1. Pandas ```factorize()``` method
+       - maps each category to a different integer.
    
-2. Scikit-Learn ```OneHotEncoder``` method
-   - converts integer categorical vlues into one-hot vectors. For eg: 
+   2. Scikit-Learn ```OneHotEncoder``` method
+      - converts integer categorical vlues into one-hot vectors. For eg: 
    ```
    from sklearn.preprocessing import OneHotEncoder
    encoder = OneHotEncoder()
    housing_encoded = encoder.fit_transform(housing)
    ```
 
-3. Scikit-Learn ```CategoricalEncoder``` method
-- converts text categories to interger categories, then from integer ategories to one-hot vectors.
+   3. Scikit-Learn ```CategoricalEncoder``` method
+      - converts text categories to interger categories, then from integer ategories to one-hot vectors.
 ```
 from sklearn.preprocessing import CategoricalEncoder
 encoder = CategoricalEncoder()
