@@ -1,29 +1,9 @@
-# Regression Models
+# Hyperparameter Tuning:
 
-### Performace Measure for Regression Problems:
-1. **Root Mean Square Error(RMSE):**
-   - gives idea how much error the system typically makes in its prediction.
-   - gives higher weight for larger errors.
-   - corresponds to eculidian norm: also called L2 norm
-   - denoted as ```|| . ||```
+1. **Manual Search:**
+   - One way to do is to fiddle with hyperparameters manually, untill you find a great combination of hyperparameter values.
+   - This is very tedious and you may not have time to explore many combinations.
 
-2. **Mean Absolute Error (MAE):**
-   - also called Avg. Absolute Deviation.
-   - also called Manhattan norm, becuase it measure the dist b/w 2 point ina  city if you can only travel along orthogonal 
-   city blocks.
-   - also called L1 norm
-   
-- The higher the norm index, the more it focuses on larger values and neglects the small ones. 
-- This is why RMSE is more sensitive to outliers then MAE.
--  But, when outliers are exponentially rare (like a bell-shaped curve), the RMSE performs very well and is generally preferred.
-
-### Notes on Correlation Measure:
-
-1. Correlation coefficient ranges from -1 to 1. 
-2. When correlation is close to 1, it means there is a strong positive correlation.
-   - For eg: Median house value tends to go up when the median income goes up.
-3. When correlation is close to -1, it means that there is negative correlation.
-   - Foe eg: house proves goes down as you go down the hill.
-4. When correlation is close to 0, it means that there is No linear correlation.
-
-**NOTE:** The correlation coefficient only measures linear correlations. for eg: if X goes up/down, Y goes down/up. It may completely miss the non-linear relationships, eg: if x is close to zero then y generally goes up/down.
+2. **Grid Search:**
+   - Scikit-Learn's provides ```GridSearchCV```.
+   - all you need to tell is which hyperparameter you want to experiment and what values to try out, and it will evaluate all possible combinations of hyperparameters values using cross validation.
