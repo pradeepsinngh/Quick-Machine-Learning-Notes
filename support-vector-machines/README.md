@@ -79,13 +79,13 @@
 - **Kernel Trick:** it makes it possible to obtain a similar results as if you had added many similarity features, without actually having to add them.
 
 #### Hyperparameter:
+- C
 - Gamma: 
   - increasing gamma makes the bell-shape curve narrower and as a result each instance's range of influence is smaller, the decision boundary ends up being more irregular, wiggling around individual instances.
   - conversely, a small gamma value makes the bell-shaped curve wider, so instances have a larger range of influence, and the decision boundary ends up smoother. 
   - So, gamma acts like a regularization hyperparameter.
      - If you model is overfitting, reduce gamma.
      - If your model is underfitting, increase the gamma.
-- C
  
 
 ### Which kernel to choose and how?
