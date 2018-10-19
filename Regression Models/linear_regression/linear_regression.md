@@ -90,9 +90,15 @@ What is the point of squaring the error? We square the error for two reasons:
 Linear Regression makes five key assumptions about your data:
 1. Linear relationship
 2. Multivariate normality (are your variables distributed normally?)
-3. Little to no multicollinearity (multicollinearity occurs when the independent variables are too highly correlated with each other)
+3. Little to no multicollinearity (multicollinearity occurs when the independent variables are too highly correlated with each other). 
+   - Use Correlation matrix, Correlation coeff should be less than 1.
+   - If multicollinearity is found, try deducing mean from the score.
 4. No Auto-Correlation
+   - Autocorrelation occurs when the residuals are not independent from each other.
+   - In other words when the value of y(x+1) is not independent from the value of y(x).
 5. Homoscedasticity
+   - The scatter plot is good way to check whether the data are homoscedastic 
+   - (meaning the residuals are equal across the regression line).
 
 #### When should I use linear regression?
 
