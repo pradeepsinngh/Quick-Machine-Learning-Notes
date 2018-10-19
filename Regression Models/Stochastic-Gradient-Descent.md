@@ -16,11 +16,17 @@ To circumvent the difficulty of computing a gradient across the entire training 
 We most commonly run stochastic gradient descent by shuffling the data points and using each one in its shuffled order until one complete pass through the training data is completed. If the algorithm hasn't converged, we reshuffle the points and run another pass through the data. Each iteration of stochastic gradient descent looks at one data point; each complete pass through the data is called an epoch.
 
 
-## Behavior of Stochastic Gradient Descent
+## Behavior of Stochastic Gradient Descent:
 
 1. Since stochastic descent only examines a single data point a time, it will likely update θ less accurately than a update from batch gradient descent. 
+2. Randomness: it is much less regular then batch gradient descent: insted of gentely decreasing untill it reaches the minimum, the cost function will bounce up and downy on average.
+3. Since stochastic gradient descent computes updates much faster than batch gradient descent, stochastic gradient descent can make significant progress towards the optimal θ by the time batch gradient descent finishes a single update.
 
-2. However, since stochastic gradient descent computes updates much faster than batch gradient descent, stochastic gradient descent can make significant progress towards the optimal θ by the time batch gradient descent finishes a single update.
+### For irregular Cost function:
+When the cost function is irregular, this can actually help the algorithm jump out of the local minimum, so Stochastic Gradient Descent has a better chance of finding the global minimum then batch gradient descent.
+
+### Randomness:
+Therefore, randomness is good to escape from local optima, but bad  because it means that the algorithm can never settle at the minimum. One solution is to gradually decreasee the learning rate. Start with large steps (which helps make quick progress) and then step gets smaller and smaller, allowing algorithm to settle at the gloabl minimum.
 
 ## Way Ahead: Mini-batch Gradient Descent
 Mini-batch gradient descent strikes a balance between batch gradient descent and stochastic gradient descent by increasing the number of observations that we select at each iteration. In mini-batch gradient descent, we use a few data points for each gradient update instead of a single point.
