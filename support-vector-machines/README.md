@@ -49,17 +49,30 @@
 - But, at a low polynomial degree SVM can not deal with very complex datasets.
 - And, with a high ploynomial degree it creates a huge number of features, making the model too slow.
 
-
 ## How to fix this issue? Use Kernel trick!
 - **Kernel Trick:** It makes it possible to get the same result as if you added many polynomial features, even with very high-degree polynomials, without actually having to add them. So, there is no combinattorial explosion of the number of features since you don't actually add any features. This trick is implemented by the SVC class. 
-- 
-- 
 
 ## Hyperparameter:
 - In Scikit-learn, `coef0` is the hyperparameter, that controls how much the model is influenced by high-degree polynomials vs lower-degree polynomials.
+- C
+- Gamma
 
 
-
+## Adding Similarity Function:
+- it helps tackling nonlinear problems.
+- Add features computed using similarity function - that measures how much each instances resembles a particular landmark.
+- Eg: Similarity function -- Gaussian Radial Basis Function (RBF)
+  - RBF is a bell-shaped function varying from 0(very fra from the landmark) to 1 (at the landmark).
+ - Adding new fatures using similarity function can transform the datasets, with newer dataset being linearly seprable.
+ 
+ - **How to select landmark?**
+ - Simple Approach:
+   - Create landmark at the location of each and every instance in the dataset. This creates many dimensions and thus increase the chance that the transformed training set will be linearly seprable.
+ - Downside:
+   - A training set with m instances and n features get transformed into a training set with m instances and m features.
+   - So, if your training set is large you end with up an equally large number of features.
+   
+ 
 
 
 
