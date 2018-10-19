@@ -38,24 +38,25 @@
 - Data should be linearly separable - i.e. data should be linear.
 
 ## Non-Linear SVM Classification:
-- What if your data is not linearly separable? Use Nonlinear SVM Classifiers.
-- Add more features. eg: polynomial features.
-- Add features computed using similarity function -- that measures how much each instances resembles a particular landmark.  
+### What if your data is not linearly separable? 
+1. Use Nonlinear SVM Classifiers.
+2. Add more features. eg: polynomial features.
+3. Add features computed using similarity function -- that measures how much each instances resembles a particular landmark.  
 
 **Q** How to handle non-linear datasets/ data? Add more features, such as polynomial features. In some cases, adding some features, daatset can become linearly separable.
 
-## Problem: What is the issues with adding polynomial features?
-1. - Adding ploynomial features is simple to implement and can work great with all sorts of ML models (not just SVMs).
+#### Problem: What is the issues with adding polynomial features?
+- Adding ploynomial features is simple to implement and can work great with all sorts of ML models (not just SVMs).
 - But, at a low polynomial degree SVM can not deal with very complex datasets.
 - And, with a high ploynomial degree it creates a huge number of features, making the model too slow.
 
-## How to fix this issue? Use Kernel trick!
+#### How to fix this issue? Use Kernel trick!
 - **Kernel Trick:** It makes it possible to get the same result as if you added many polynomial features, even with very high-degree polynomials, without actually having to add them. So, there is no combinattorial explosion of the number of features since you don't actually add any features. This trick is implemented by the SVC class. 
 
-## Hyperparameter:
+### Hyperparameter:
 - In Scikit-learn, `coef0` is the hyperparameter, that controls how much the model is influenced by high-degree polynomials vs lower-degree polynomials.
+- degree
 - C
-- Gamma
 
 
 ## Adding Similarity Function:
@@ -68,13 +69,32 @@
  - **How to select landmark?**
  - Simple Approach:
    - Create landmark at the location of each and every instance in the dataset. This creates many dimensions and thus increase the chance that the transformed training set will be linearly seprable.
- - Downside:
-   - A training set with m instances and n features get transformed into a training set with m instances and m features.
-   - So, if your training set is large you end with up an equally large number of features.
-   
+ 
+#### Problem: What is the issues with adding features using similarity function (Gaussian RBF)?
+ - A training set with m instances and n features get transformed into a training set with m instances and m features.
+ - So, if your training set is large you end with up an equally large number of features.
+ - So, it is computationally expensive. Computing all the additional features, especially on large training sets.
+  
+#### How to fix this issue? Use Kernel trick!
+- **Kernel Trick:** it makes it possible to obtain a similar results as if you had added many similarity features, without actually having to add them.
+
+#### Hyperparameter:
+- Gamma: 
+  - increasing gamma makes the bell-shape curve narrower and as a result each instance's range of influence is smaller, the decision boundary ends up being more irregular, wiggling around individual instances.
+  - conversely, a small gamma value makes the bell-shaped curve wider, so instances have a larger range of influence, and the decision boundary ends up smoother. 
+  - So, gamma acts like a regularization hyperparameter.
+     - If you model is overfitting, reduce gamma.
+     - If your model is underfitting, increase the gamma.
+- C
  
 
-
+### Which kernel to choose and how?
+- There are so many kernels to choose from. For eg: string kernels.
+- There are specialized kernels for specific data structures.
+- **Thumb Rule:**
+  - Always try linear kernel first.(esp, if training set is large OR if it has plenty of features.)
+  - If training set is not too large, go with Gaussian RBF kernel.
+  - Try some other kernels, using cross-validation and grid search.
 
 
 
