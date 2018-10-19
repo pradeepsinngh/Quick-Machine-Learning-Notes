@@ -3,7 +3,6 @@
 - it means adding some constraints to your model.
 - it is used to avoid over-fitting. the few degree of freedoms it has, the harder it will be for it to overfilt the data.
 - For eg: a simple way to regularize a polynomial model is to reduce the number of polynomial degrees.
-
 - For a linear model, regularization is achieved by constraining the weights of the model.
 
 ### Ridge Regression:
