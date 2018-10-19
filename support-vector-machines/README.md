@@ -37,6 +37,10 @@
 - SVM can be used for linear classification.
 - Data should be linearly separable - i.e. data should be linear.
 
+#### Computational Complexitiy:
+- it's training time complexity is roughly, O(m * n).
+- algorithm takes longer if you need very high precision. This is controlled by tolerance hyperparameter -- called tol in Scikit-learn. It is set to fine by default.
+
 ## Non-Linear SVM Classification:
 ### What if your data is not linearly separable? 
 1. Use Nonlinear SVM Classifiers.
@@ -97,6 +101,10 @@
   - Try some other kernels, using cross-validation and grid search.
 
 
+### Computaional Complexity:
+- the training time complexity is usually between O(m2 * n) and O(m3 * n).
+- this means it gets slower when the training instances gets large
+- this algorithm is perfect for complex but small or medimum datasets.
 
 
 
