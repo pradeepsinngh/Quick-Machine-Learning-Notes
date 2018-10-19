@@ -1,12 +1,7 @@
 # Linear Regression
+It is a supervised regression algorithm, meaning it learns some mapping from a set of input variables to some continuous output variable. Linear regression learns this mapping by fitting coefficients in a linear equation that reduces error in estimating some desired output.
 
-#### Hello, Linear Regression
-Linear regression is one of the best starting points to learn machine learning. It is a supervised regression algorithm, meaning it learns some mapping from a set of input variables to some continuous output variable. Linear regression learns this mapping by fitting coefficients in a linear equation that reduces error in estimating some desired output.
-
-Below are links to see linear regression in action
-
-* [from scratch](https://github.com/jimmychimmyy/machine_learning_notes/blob/master/linear_regression/linear_regression.ipynb)
-* [using sklearn]()
+Generally, Linear Models makes predicition by simply computing a weighted sum of the input features, plus a constant bias term (also called intercept).
 
 #### How does it work?
 
@@ -47,12 +42,6 @@ Before we update b and ϴ, we need to multiply both our gradients by some learni
 
 Once we've applied our learning rate to both gradients, we simply subtract these values from b and ϴ, respectively. We repeat this process some number of times until we are satisfied that we cannot reduce our MSE.
 
-...
-
-###### need to add math to show how it works
-
-For a more detailed explanation of gradient descent click [here](https://github.com/jimmychimmyy/machine_learning_notes/blob/master/gradient_descent/gradient_descent.md).
-
 #### What if we have more than 1 variable?
 
 Remember that, by definition, simple linear regression has a single independent variable and a single dependent variable. As your data becomes more complex, you have more independent variables (features), you will need to use multivariable linear regression.
@@ -84,8 +73,6 @@ Remember that, by definition, simple linear regression has a single independent 
 
 *Note that m = the number of instances (number of rows), n = number of features (number of columns)*
 
-Multivariable linear regression is
-
 #### Cost Function
 
 There are many choices of cost functions for linear regression, I will be going over one of the most popular cost functions: **Mean Squared Error (MSE)**.
@@ -95,15 +82,6 @@ What exactly is MSE? Imagine we have an arbitrary set of points [1, 2, 3, 4, 5, 
 What is the point of squaring the error? We square the error for two reasons:
 1. to ensure that the difference is always positive
 2. to emphasize larger differences (similar reasoning behind log scale)
-
-###### TODO: add image
-
-#### Gradient Descent
-
-###### TODO: add math behind gradient descent
-
-
-#### How to evaluate performance of Linear Regression
 
 #### Assumptions of Linear Regression
 
@@ -118,12 +96,11 @@ Linear Regression makes five key assumptions about your data:
 
 When you are faced with a regression problem, needing to map some variables to some continuous feature, I highly recommend starting with linear regression to establish some sort of base line of performance. It is a simple algorithm to implement and is widely available in open source libraries.
 
-#### Things to watch out for
 
 #### Tips and Tricks
 
 * Linear Regression works best when your input features share a similar scale so it is in your best interest to do some feature scaling and normalization before using linear regression.
-* If you are going to implement linear regression yourself, I highly recommend that you vectorize your input. By doing so, you can avoid using lots of loops and write cleaner code. Some knowledge of [linear algebra](https://github.com/jimmychimmyy/machine_learning_notes) required.
+* If you are going to implement linear regression yourself, I highly recommend that you vectorize your input. By doing so, you can avoid using lots of loops and write cleaner code.
 
 #### Sources
 1. https://www.youtube.com/watch?v=ZkjP5RJLQF4 <- this is an amazing source to really grasp the concept of linear regression
