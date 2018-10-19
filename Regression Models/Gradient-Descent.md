@@ -2,6 +2,7 @@
 
 ### basic idea:
 function that can minimize a loss function without forcing the user to predetermine which values of θ to try.
+measure the local gradient of the error function with regard to the parameter vector 0, and it goes in the direction of descending gradient.
 
 ### Intuition:
 - we start by picking a θ anywhere we'd like. 
@@ -11,6 +12,14 @@ function that can minimize a loss function without forcing the user to predeterm
   - If slope is positive, decreasing θ will decrease the loss.
 - The slope of the tangent line tells us which direction to move θ in order to decrease the loss. If the slope is negative, we want θ to move in the positive direction. If the slope is positive, θ should move in the negative direction.
 
+### Parameters:
+- size of steps
+- learning rate
+  - if learning rate is too small, algorithm had to go through too many iterations to converge.
+  - if learning rate is too high, you might jump across the valley and might miss your local minimum.
+  
+### Tips:
+- When using gradient descent, make sure all features have a similar scale or else it will take much longer to converge.
 
 ## Summary:
 
