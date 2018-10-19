@@ -79,6 +79,8 @@ There are many choices of cost functions for linear regression, I will be going 
 
 What exactly is MSE? Imagine we have an arbitrary set of points [1, 2, 3, 4, 5, 6, 7]. The mean of this set is 4. Error tells us how far away from the mean each of the points in the set are. For example, there is a difference of 3 between 1 (the first element) and the mean. MSE is simply the square of the difference, which for the case of 1 is 9 (since 3^2 = 9). Basically, the farther the points lie from the mean, the larger our MSE will be. The goal of linear regression is to find a best fit line with the smallest possible MSE.
 
+MSE cost function for linear regression is a convex function.
+
 What is the point of squaring the error? We square the error for two reasons:
 1. to ensure that the difference is always positive
 2. to emphasize larger differences (similar reasoning behind log scale)
