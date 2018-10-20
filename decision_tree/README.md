@@ -74,11 +74,9 @@
   - Entropy tends to produce slightly more balanced trees.
 
 
+### What is Pruning?
 
-
-
-
-
+Pruning is deleting unnecessary nodes. A node whose children nodes are all leaf nodes is considered unnecessary if the purity improvement it provides is not statistically significant. standard test such as Chi-squared test are used to estimate the probablity that the improvement is purely the result of chance (which is our null hypothesis). If the prob, called p-value is higher than a given threshold (typically 5%), then the nodes is considered unnecessary and its children are delted. Pruning continues till the time all unnecessary nodes are not deleted.
 
 
 
