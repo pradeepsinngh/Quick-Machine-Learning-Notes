@@ -30,3 +30,55 @@
 2. **Value:** tells how many training instances of each class this node applies to.
 3. **Gini:** measures it's impurity: a node is pure (gini= 0)if all training instances it applies to belong to the same class.
 
+## The CART Training Algorithm:
+- Algorithm first split the datasets into two subsets using a single feature k and a threshold tk (eg: petal length).
+- How does it search for k and tk?
+  - It searches for the pair (k,tk) that produces the purest subsets (weighted by their size).
+- CART cost function:
+- Once it has successfully split the training set in two, it splits the subsets using the same logic,
+- then the subsets,
+- and so on, recursively.
+- It stop recursing once it reaches the maximum depth (defined by max_depth hyperparameter), or if it cannot find a split that will reduce impurity.
+
+- CART is greedy algo.
+- It greedily search for an optimum split at the top level, then repeats the process at each level.
+- It does not check whether or not the split will lead to the lowest possible impurity several levels down.
+- A greedy algorithm often produces a reasonably good solution, but it is not guranteed to be the optimal solution.
+- Unfortunately, finding the optimal tree is known to be NP-Complete problem: it require O(exp(m)) time, making it intractable even for a small training set. This is why we settle for a reasonably good solution.
+
+
+## Hyperparameter:
+- max_depth:
+- min_samples_splits:
+- min_samples_leaf:
+- min_weigth_fraction_leaf:
+- max_leaf_nodes:
+
+## Computational Complexitiy:
+- Decision trees are generally approximately balanced, so transversing the DT requires going through roughly O(log2(m)) nodes.
+- Since, each node only requires checking the value of one feature, the overall prediction complexitiy is O(log2(m)), independent of the numbers of features.
+- So, predictions are very fast, even when dealing with large datasets.
+
+- However, the training algo. compares all features on all samples at each node. this results in a training complexity of O(n * m * log(m)).
+- This slow down the training process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
