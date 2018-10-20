@@ -21,3 +21,6 @@
 - and 3rd subset is used to create training set used to train 3rd layer (using prediction made by second layer).
 - Once all layers are trained, we can go through all layers sequentially to make prediction on a new instance.
 
+
+- You can parallize training of predcitors in a layer but you can not parallize layers itself, as learning/ training 2nd layer depends on 1st layer. etc.
+- Does not scale very well.
