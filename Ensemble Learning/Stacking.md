@@ -15,4 +15,9 @@
 
 - We can have multiple layers.
 - We can train several different blenders (one using linear regression, another using random forest regression, and so on.)
-- 
+- Trick is to divided training set into m different subsets (m = number of layers).
+- Use 1st subset to train first layers.
+- 2nd subset is used to create training set used to train 2nd layer (using prediction made by first layer).
+- and 3rd subset is used to create training set used to train 3rd layer (using prediction made by second layer).
+- Once all layers are trained, we can go through all layers sequentially to make prediction on a new instance.
+
