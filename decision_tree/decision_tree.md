@@ -83,8 +83,6 @@ Pruning is deleting unnecessary nodes. A node whose children nodes are all leaf 
 2. More generally, the main issue with Descision trees is that they are very sensitive to small variations in training data.
 
 
-#### Tips and Tricks
-
 #### Sources
 1. https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/
 2. https://en.wikipedia.org/wiki/ID3_algorithm
