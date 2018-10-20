@@ -13,6 +13,9 @@ For eg: Random forest, is an ensemble of decision trees. Most popular Ensemble m
 
 Hard Voting Classifier: A simple way to crete better classifier is to aggregate the predictions of many classifiers and predict the class that gets the most votes. This majority-vote classifier is called a hard voting classifier.
 
+For eg: Suppose you have probabilities, of 3 different classifiers: `0.45, 0.45, 0.90`
+Then hard voting would give you a score of 1/3 (1 vote in favour and 2 against), so it would classify as a "negative".
+
 And, surprisingly, this voting classifier often achieves a higher accuracy then the best classifier in the ensemble. In fact, even if each classifier is a *weak learner* (meaning it does only slightly better than random guessing), the ensemble cas still be a *strong learner* (achieving high accuracy), provided there are sufficient number of waek learners and they are sufficiently diverse.
 
 #### How is this possible? [Clue: Law of large numbers]
@@ -32,6 +35,26 @@ And, surprisingly, this voting classifier often achieves a higher accuracy then 
 
 ## Assumptions for Ensemble Learning:
 - Many weak learners -- sufficeiently large numbers
-- sufficiently diverse.
+- sufficiently diverse classifiers.
 - All classifiers should be independent, making uncorrelated errors.
+
+**NOTE/ TIPS:**
+- Ensemble methods work best when the predictors are as independent from one another as possible.
+- One way to get diverse classifiers is to train using differnt algorithms.
+- This increase chance that they will make different types of errors, improving the ensembles's accuracy.
+
+## Soft Voting Classifier:
+If all classifiers are giving you the class probabilities, then you can predict the class with highest class prob., averaged over all the individual classifiers. This is called soft voting.
+
+For eg: Suppose you have probabilities, of 3 different classifiers: `0.45, 0.45, 0.90`.
+- Soft voting would give you the average of the probabilities, which is 0.6, and would be a "positive".
+- Soft voting takes into account how certain each voter is, rather than just a binary input from the voter.
+- Soft voting classifier often achieve higher performace than hard voting because it gives more weight to highly confident votes.
+
+
+
+
+
+
+
 
