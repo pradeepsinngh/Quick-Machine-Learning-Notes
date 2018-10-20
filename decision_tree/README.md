@@ -48,11 +48,14 @@
 
 
 ## Hyperparameter:
-- max_depth:
-- min_samples_splits:
-- min_samples_leaf:
+- max_depth: restrict the depth of decision tree (used to regularize the DT)
+- min_samples_splits: min number of samples a node must have before it could split
+- min_samples_leaf: min number of samples a leaf node must have
 - min_weigth_fraction_leaf:
-- max_leaf_nodes:
+- max_leaf_nodes: max number of leaf nodes
+- max_features: max number of features that are evaluated for splitting at each node.
+
+- Increasing `min_* hyperparameters` or reducing `max_* hyperparameters` will regularize the model.
 
 ## Computational Complexitiy:
 - Decision trees are generally approximately balanced, so transversing the DT requires going through roughly O(log2(m)) nodes.
@@ -63,7 +66,12 @@
 - This slow down the training process.
 
 
-
+### What to use: Gini Impurity or Entropy?
+- most of the time it doesn't make a big difference: they lead to similar trees.
+- Gini Impurity is slightly faster to compute, so it is a good default.
+- If trees differ:
+  - Gini impurity tends to isolate the most freq class in its own branch of the tree.
+  - Entropy tends to produce slightly more balanced trees.
 
 
 
