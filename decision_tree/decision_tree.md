@@ -1,10 +1,10 @@
 # Decision Tree (CART)
 #### 
-A decision tree, also referred to as Classification and Regression Tree (CART), is a powerful algorithm that can beautifully illustrate how an algorithm learns from data. A decision tree is essentially a binary tree which finds optimal splits in features in order to classify or predict continuous values. 
+A decision tree, also referred to as Classification and Regression Tree (CART), is essentially a binary tree which finds optimal splits in features in order to classify or predict continuous values. 
 
 One of the many qualities of descision tree is that they require very little data preparation. In particular, they don't require feature scaling or centering at all.
 
-#### How does it work?
+#### How does decision tree work?
 
 A decision tree contains 2 main elements: nodes and edges.
 
