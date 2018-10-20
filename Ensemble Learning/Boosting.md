@@ -5,6 +5,7 @@
 - There are many boosting methods, by far the most famous are: Adaboost and Gradient Boosting.
 
 # AdaBoost:
+- sequentially learning method
 - In AdaBoost, predictor focuses more and more on hard case i.e. cases on which it's predecessor underfitted. 
 - So, it's like current predictor is correcting it's predecessor by working/ focusing more on cases where it's predecessor failed.
 
@@ -30,3 +31,14 @@
 -----------------------------------------------------------------------------------------------------------------------------
 
 # Gradient Boosting
+- sequentially learning method
+- sequentially adding predictors to the ensembles, each one correcting its predecessor, just like AdaBoost.
+- However, instead of tweaking the instances weights at every iteration like AdaBoost does, this method tries to fit the new predictor to the residual erros made by the preious predictor.
+
+
+### Hyperparameter:
+1. learning_rate: scales contribution of each tree, so if it is low (0.1) you will need many trees in the ensemble to fit the training set, but the prediction will usually generalize better. This is regulariation tech. called shrinkage.
+
+
+
+
