@@ -87,4 +87,3 @@ Pruning is deleting unnecessary nodes. A node whose children nodes are all leaf 
 
 
 
-
