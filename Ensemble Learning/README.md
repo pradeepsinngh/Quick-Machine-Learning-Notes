@@ -9,7 +9,7 @@ A group of predictior is called an **ensemble**; thus this technique is called *
 
 For eg: Random forest, is an ensemble of decision trees. Most popular Ensemble methods are bagging, boosting, stacking.
 
-## Hard Voting Classifier (Why does ensemble methods with many weak classifier often achieves high accuracy then the best classifier in the ensemble)?
+### Hard Voting Classifier (Why does ensemble methods with many weak classifier often achieves high accuracy then the best classifier in the ensemble)?
 
 Hard Voting Classifier: A simple way to crete better classifier is to aggregate the predictions of many classifiers and predict the class that gets the most votes. This majority-vote classifier is called a hard voting classifier.
 
