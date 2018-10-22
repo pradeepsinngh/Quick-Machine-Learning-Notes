@@ -6,13 +6,13 @@ Supervised Learning is the most commonly used form of machine learning. You must
 
 The classic example for supervised learning is to classify images of handwritten digits using the MNIST database. These handwritten digits are individually labeled so we know exactly what digit each image corresponds to.
 
-#### What are some supervised learning algorithms and how do they work?
-1. [Linear Regression](https://github.com/jimmychimmyy/machine_learning_notes/blob/master/linear_regression.md)
+#### What are some supervised learning algorithms?
+1. Linear Regression
 2. Logistic Regression
 3. SVM
 4. Naive Bayes
 5. Decision Tree
-6. KNNÂ
+6. KNN
 7. Neural Networks
 
 #### Sources
