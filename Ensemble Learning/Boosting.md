@@ -40,5 +40,19 @@
 1. learning_rate: scales contribution of each tree, so if it is low (0.1) you will need many trees in the ensemble to fit the training set, but the prediction will usually generalize better. This is regulariation tech. called shrinkage.
 
 
+###### Parameters
+1. Loss Function
+2. Weak Learner ([Decision Tree](https://github.com/jimmychimmyy/machine_learning_notes/blob/master/decision_tree/decision_tree.md))
+3. Additive Model
+
+###### Hyperparameters
+1. Tree Constraints
+2. Shrinkage
+3. Random Sampling
+4. Penalized Learning
+5. Number of Iterations
+
+Note that, your weak learner does not always necessarily have to be a decision tree, however, in practice it usually is.
+
 
 
