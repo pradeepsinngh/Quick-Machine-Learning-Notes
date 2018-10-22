@@ -23,7 +23,7 @@
 2. When correlation is close to 1, it means there is a strong positive correlation.
    - For eg: Median house value tends to go up when the median income goes up.
 3. When correlation is close to -1, it means that there is negative correlation.
-   - Foe eg: house proves goes down as you go down the hill.
+   - Foe eg: house prices goes down as you go down the hill.
 4. When correlation is close to 0, it means that there is No linear correlation.
 
 **NOTE:** The correlation coefficient only measures linear correlations. for eg: if X goes up/down, Y goes down/up. It may completely miss the non-linear relationships, eg: if x is close to zero then y generally goes up/down.
