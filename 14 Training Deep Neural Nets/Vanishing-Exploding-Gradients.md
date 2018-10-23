@@ -59,5 +59,26 @@ What we need is the signal to flow properly in both directions: in forward direc
 - This small slope ensures that leaky ReLu never dies; they can go into long comma, but they have a chance to eventually wake up.
 
 
+#### ELU: Exponential Linear Unit:
+- better than ReLu and performs better.
+- ELU (z) = alpha(exp(z) - 1) if z < 0
+- ELU (z) = z                 if z >= 0
+
+- It looks like ReLu, with few major changes:
+  - has non zero gradient for z< 0, which avoides dying units issue.
+  - func is smooth everywhere, including at z = 0
+  - it takes on negative value when z <0 which allow unit to have an average output closer to 0. this helps in alleviating vanishing gradient problem.
+  
+**Problems:**
+  - slower to compute than ReLu and it's variants due to use of exponential function.
+ 
+
+#### What activation function to choose for hidden layers?
+- general ELU > Leaky ReLu > ReLu > tanh > logistic 
+- if you care about runtime performance: you may use Leaky ReLu over ELUs
+
+
+
+
 
 
