@@ -84,8 +84,11 @@ Covariate shift refers to the change in the input distribution to a learning sys
 
 It is well established that networks converge faster if the inputs have been whitened (ie zero mean, unit variances) and are uncorrelated and internal covariate shift leads to just the opposite.
 
-The technique consists of adding an opration in the model just before the activation func of each layer, simply zero-centering and normalizing the inputs, then scaling and shifting the result using two new parameters per layer.
+The technique consists of adding an opration in the model just before the activation func of each layer, simply zero-centering and normalizing the inputs, then scaling and shifting the result using two new parameters per layer. In other words, this operation lets the model learn the optimal scale and mean of the inputs for each layer.
 
+During traiing time, in order to zero-center and normalize the inputs, the algorithm needs to estimate the input mean and std. dev. It does so by evaluating the mean and std. dev. by evaluating mean and std. dev. of the inputs over the current mini batch.
+
+During test time, the normalization is done using the population statistics instead of mini-batch statistics to ensure that the output deterministically depends on the input.
 
 **Advantages Of Batch Normalization**
 - Reduces internal covariant shift.
