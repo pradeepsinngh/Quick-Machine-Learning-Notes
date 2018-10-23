@@ -18,3 +18,32 @@ This is actually made worse by the fact that the logistic function has a mean of
 You can see Logisitic activation function, when input becomes large (negative or positive), the function staturates at 0 or 1, with a derivative extermely close to 0. Thus when we backpropagate, it has virtually no gradient to go back and update weights. Whatever little gradient is left used to update top layers, as we go back (to wards lower layers) there is nothingleft for lower layers.
 
 ### How to tackle Vanishing/ Exploding Gradients Problem?
+What we need is the signal to flow properly in both directions: in forward direction when making predictions, and in the reverse directions when back propgating gradients. We don't want singal to die out, nor do we want it to explode and staturate.
+
+1. **Xavier and He Initialization:**
+- We want variance of of the outputs of each layer eqyal to variances of inputs.
+- We also want gradients to have equal variance before and after flowing through a layer in the reverse direction.
+- It is actually not possible to have this, unless you have equal no of inputs and outputs connections.
+- A good compromise: the connections weights must be initialized randomly.
+- If you have roughly equal n_inputs and n_outputs, you get s.d. = 1/sq_root(n_inputs) and mean 0.
+- Xavier initialization can speed up the training process.
+
+- The initialization startegy for ReLu activation fnction (and ELU activation) is called **He Initialization**.
+- s.d. = sq_root(2) * sq_root(2/(n_inputs + n_outputs)) and mean 0
+
+**Analogy:**
+- If you set a microphones amplifier's knob too close to zero, people won't be able to hear anything.
+- If you set a microphones amplifier's knob too close to max, voice witll explode/ saturate, people won't be able to understand anything.
+- Now, imagine a chain of such amplifiers: they need to set propely in order to for your voic to come out loud and clear at the end of chain.
+- Your voide has to come out of each amplifier at the same amplitude as it came in.
+
+
+
+2. **Nonsaturating Activation Functions:**
+- Vanishing gradient problems were in part due to a poor choice of activation function.
+- For very long people thought, if sigmoid activation function is used in biological neurons, they must be excellent choice.
+- But, it turns out other activation functions like ReLu works much better.
+- ReLu in particular, becuase it does not saturate for positive values (and also because it's fast to compute).
+
+
+
