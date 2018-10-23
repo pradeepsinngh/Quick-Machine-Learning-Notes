@@ -2,10 +2,16 @@
 
 Deep neural networks typically have tens of thousands of parameters, sometimes even millions. With so many parameters, the network has an incredible amount of freedom and can fit a huge variety of complex datasets. But this great flexi bility also means that it is prone to overfitting the training set.
 
-### Early Stopping:
+1. Early Stopping
+2. L1 and L2 Regularization
+3. Dropout
+4. Max-Norm Regularization
+5. Data Augmentation
+
+## Early Stopping:
 To avoid overfitting the training set, a great solution is early stopping: just interrupt training when its performance on the validation set starts dropping.
 
-### L1 and L2 Regularization:
+## L1 and L2 Regularization:
 #### L1 Regularization:
 - a regularization term is added to the cost function.
 - adds “absolute value of magnitude” of coefficient as penalty term to the loss function.
@@ -20,7 +26,6 @@ To avoid overfitting the training set, a great solution is early stopping: just 
 - regularization term should only be added to the cost function during training, once model is trained, you should evaluate the performance using unregualrized performace measure.
 - hyperparamter: alpha, controls how much you want to regualirze the model. if alpha = 0, then there is no regularization and if alpha is very large, then all weights end up very close to zero and result in no learning.
 -  NOTE: bias term is not regularized
-
 
 ## Dropout:
 Baisc idea behind dropout is that at every training iteration/ step, every neuron has a probability p being temporarily dropped out, meaning it will be entirely ignored during this training step, but it may be active during next step. The hyperparameter p is called drop out and it is typically set to 50%. After training neurons don't get dropped anymore.
