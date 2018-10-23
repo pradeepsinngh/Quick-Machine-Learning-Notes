@@ -73,12 +73,23 @@ What we need is the signal to flow properly in both directions: in forward direc
   - slower to compute than ReLu and it's variants due to use of exponential function.
  
 
-#### What activation function to choose for hidden layers?
+##### What activation function to choose for hidden layers?
 - general ELU > Leaky ReLu > ReLu > tanh > logistic 
 - if you care about runtime performance: you may use Leaky ReLu over ELUs
 
+### Batch Normalization:
+
+**Internal Covariate shift**
+Covariate shift refers to the change in the input distribution to a learning system. In the case of deep networks, the input to each layer is affected by parameters in all the input layers. So even small changes to the network get amplified down the network. This leads to change in the input distribution to internal layers of the deep network and is known as internal covariate shift.
+
+It is well established that networks converge faster if the inputs have been whitened (ie zero mean, unit variances) and are uncorrelated and internal covariate shift leads to just the opposite.
+
+The technique consists of adding an opration in the model just before the activation func of each layer, simply zero-centering and normalizing the inputs, then scaling and shifting the result using two new parameters per layer.
 
 
-
-
+**Advantages Of Batch Normalization**
+- Reduces internal covariant shift.
+- Reduces the dependence of gradients on the scale of the parameters or their initial values.
+- Regularizes the model and reduces the need for dropout, photometric distortions, local response normalization and other regularization techniques.
+- Allows use of saturating nonlinearities and higher learning rates.
 
