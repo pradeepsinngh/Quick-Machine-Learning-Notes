@@ -33,5 +33,59 @@ To simulate some sort of friction mechanism and prevent the momentum from growin
 The equation is : `m = beta * m - learning_rate * del J(0)`
                    `0 = 0 + m`
 
+Due to the momentum, the optimizer may over shoot a bit, then come back, overshoot again, and oscillate like many times before stabilizing at the minimum. This is one of the reason why it is good to have a bit of friction in the system: it gets rid of these osciallations and thus speeds up convergence.
+
+** Drawback:** It adds one more hyperparameter: beta. However, momentum value (beta) of 0.9 usually works well in practice and almost always goes faster then gradient descent.
+
+#### Summary:
+- Momentum optimization is faster than gradient descent and escapes from plateaus much faster than gradient descent.
+- Gradient descent goes down the steep slope quite fast, but then it takes a very long time to go down the valley.
+- In contrast, momentum optimization will roll down the bottom of the valley faster and faster untill it reaches the bottom (the optimum).
+
 --------------------------------------------------------------------------------------------------------------------------
+
+## Nesterov Accelerated Optimization (NAG):
+- small tweak to momentum optimization.
+- It measures the gradient of cost function not at the local position but slightly ahead in the direction of the momentum.
+- The only difference from vanilla momentum optimization is that the gradient is measured at `0 + beta * m ` rather than at `0`.
+
+The equation is : `m = beta * m - learning_rate * del J(0 + beta * m)`
+                  `0 = 0 + m`
+
+The small tweak works because in general the momentum vector will be pointing in the right direction, so it will be slightly more acurate to use the gradient measured a bit farther in that direction rather than using the gradient at the orignal position.
+
+- It will almost always speedup the training compared to regular momentum optimization.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+## AdaGrad: (Adaptive Learning)
+Consider: Gradient descent starts by quickly going down the steepest slope, then slowly goes down the bottom of the valley. It would be nice if algorithm could detect this early on and correct its direction to point a bit more toward the global optimum.
+
+AdaGrad algorithm achieves this by scaling down the gradient vector along the steepest dimensions. In short, this algorithm decays the learning rate, but it does so faster for steep dimensions than for dimensions with gentler slopes. This is called an adaptive learning rate. It helps point the resulting updates more directly toward the global optimum and requires much less tuning of learning rate hyperparameter.
+
+**Drawbacks:**
+- It stops too early for neuran network based models. The learning rates gets scaled down so much that the algorithm ends up stopping entirely before reaching the global optimum.
+- Slows down a bit too fast and ends up never converging to the gloabl optimum.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+## RMSProp:
+- RMSProp fixes AdaGrad drawback: Slows down a bit too fast and ends up never converging to the gloabl optimum.
+- RMSProp fixes this by accumlating only the gradient from most recent iterations (as opposed to all the gradients since the begining of the training).
+- It does so by using exponential decay.
+- The decay rate beta is typically set to 0.9.
+- Yes, it is once again new hyperparameter, but this default value often works well, so you may not need t tune it all.
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+## Adam Optimization:
+- stands for: Adaptive moment estimation, combines idea of Momentum optimization and RMSProp.
+- Just like Momentum optimization it keeps track of an exponentially decaying avergae of past gradients and just like RMSProp it keeps track of an exponentially decaying average of past squared gradients.
+- momentum decay hyperparameter (beta 1): is intitalized to 0.9, while the scaling decay hyperparameter (beta 2) is often intialized to 0.999.
+
+
+
+
+
 
