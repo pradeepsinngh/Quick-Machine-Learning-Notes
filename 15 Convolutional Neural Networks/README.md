@@ -7,4 +7,8 @@ Also, some neurons react only to images of horizontal lines, while others react 
 
 This powerful architecture, where you have neurons at different levels doing different work, lower level, mide level and higher level neurons are all used to decode difffernt and complex pattersn.
 
+#### why not simply use a regular deep neural network with fully connected layers for image recognition tasks?
+Unfortunately, although this works fine for small iamges (eg: MNSIT), it breaks down for larger images becuase of huge number of parameters it require. For eg: a 100 X 100 image has 10,000 pixels, and if the first layer has just 1,000 neurons (which already serverly restricts the amount of information transmitted to the next layer), this means a total 10 millions connections. And that's just the first layer. CNN solves this problem by partially connected layers.
+
+### Convolutional Layer:
 
