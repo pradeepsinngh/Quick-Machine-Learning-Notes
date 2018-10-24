@@ -5,3 +5,4 @@
 3. AdaGrad:
 4. RMSProp:
 5. Adam Optimization:
+
