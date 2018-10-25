@@ -24,6 +24,6 @@ A part of neural network that preserves some state across time step is called a 
 4. Seq to Vector is called Encode and Vect to Seq is called Decoder. And these both are used Machine translation tasks. And, this two-step model is called Encode-Decoder model.
 
 #### How do you handle variable length Input and Output Sequences?
-**Input Sequences:** Padd with zero
-**Output Sequences:** Define a special output called an end-of-sequence token (EOS token). And, any output past the EOS should be ignored.
+- **Input Sequences:** Padd with zero
+- **Output Sequences:** Define a special output called an end-of-sequence token (EOS token). And, any output past the EOS should be ignored.
 
