@@ -15,3 +15,37 @@ Unfortunately, although this works fine for small iamges (eg: MNSIT), it breaks 
 - In turn, neurons in the 2nd layer is only connected to pixels within a small rectangle in the 1st layer and so on..
 - This architecture allows network to concentrate on the low-level features in the first hidden layers and assemnle them into higher-level features  in the next hidden layer and so on.
 - This hierarchical structure is common in a real-world images, which is one of the reasons why CNNs works so well for image recognition.
+
+### Zero Padding:
+- Always zero pad the borders.
+- If you zero pad the image, the N increase (size/ dimesnion of image).
+- **Why zero pad?** 
+    - To maintain the size of the image.
+    - Also padding helps apply the filter on the edge/ corner regions.
+    - If we don't pad we will quickly shrink the size of image.
+   
+ ```
+ Output size: [(N - F) / Stride] + 1
+ Eg: N = 7, F = 3, Stride = 1
+ Therefore, O/P : [(7-3)/1}] + 1 = 5
+ ```
+ 
+ ### Filters/ Kernel:
+A neurons weights can be represnted as a small image of the size of their receptive field, called filter or kernels. Neurons using these weights will ignore everything (0s) in their receptive field except for the places where it has 1s, since all inputs will be multipled by 0s will be zero and with 1s will be preserved. Now if all neurons in a layer use the same filter (weights) and you feed the network the input image, the layer will output a *feature map*, which highlights the areas in a image that are most similar to the filter.
+
+During training, a CNN finds the most useful filters for its task, and it learns to combine them into more complex patterns.
+
+Typically, we stack n filters of size a * b with every layers. So, for eg: if we have a filter of size (5 * 5 * 3) in a layer, we will have (5 * 5 * 3) + 1 = 76 parameters (where 1 is bias term). And, if have n filters, so we have n * 76 parameters.
+
+**NOTE:** At every spatial location, we take a dot product between filter and the specific part of the image and we get 1 number out from there.
+
+### Stacking Multiple Feature Maps:
+A convolutional layer simultaneously applies multiple filters to inputs, making it capable of detecting multiple features anywhere in its inputs.
+
+**NOTE:** The fact that all neurons in a feature map share the same parameters dramatically reduces the number of parameters in the model, but most importantly it means that once the CNN has learned to recognize a pattern in one location, it can recognize it in any other location. In contrast, once a regular DNN has learned to recognize a pattern in one location, it can recognize it only in that particular location.
+
+ 
+ 
+ 
+ 
+ 
