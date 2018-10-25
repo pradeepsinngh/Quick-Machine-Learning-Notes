@@ -15,4 +15,15 @@ A class of nets that can predict the future (well, up to a point, of course). Th
 A part of neural network that preserves some state across time step is called a memory cells (or simple cell).
 
 ### Input and Output Sequences:
-A RNN can simultaneously take a sequence of inputs and produce a sequence of outputs. For eg: predicting time series suc as stock price.
+1. Seq to Seq: A RNN can simultaneously take a sequence of inputs and produce a sequence of outputs. 
+          - For eg: predicting time series suc as stock price.
+2. Seq to Vector: feed the network a sequence of inputs, and ignore all outputs except for the last one. 
+             - For eg: Feed a movie review and model will give you a sentiment score.
+3. Vector to Seq: Feed single input at the first time step (and 0 at all other time steps) and let it output a seq.
+             - For eg: Input a image and output could be a caption for that image.
+4. Seq to Vector is called Encode and Vect to Seq is called Decoder. And these both are used Machine translation tasks. And, this two-step model is called Encode-Decoder model.
+
+#### How do you handle variable length Input and Output Sequences?
+**Input Sequences:** Padd with zero
+**Output Sequences:** Define a special output called an end-of-sequence token (EOS token). And, any output past the EOS should be ignored.
+
