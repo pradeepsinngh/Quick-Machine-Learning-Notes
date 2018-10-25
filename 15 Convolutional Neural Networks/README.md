@@ -30,7 +30,7 @@ Unfortunately, although this works fine for small iamges (eg: MNSIT), it breaks 
  Therefore, O/P : [(7-3)/1}] + 1 = 5
  ```
  
- ### Filters/ Kernel:
+### Filters/ Kernel:
 A neurons weights can be represnted as a small image of the size of their receptive field, called filter or kernels. Neurons using these weights will ignore everything (0s) in their receptive field except for the places where it has 1s, since all inputs will be multipled by 0s will be zero and with 1s will be preserved. Now if all neurons in a layer use the same filter (weights) and you feed the network the input image, the layer will output a *feature map*, which highlights the areas in a image that are most similar to the filter.
 
 During training, a CNN finds the most useful filters for its task, and it learns to combine them into more complex patterns.
@@ -45,7 +45,35 @@ A convolutional layer simultaneously applies multiple filters to inputs, making 
 **NOTE:** The fact that all neurons in a feature map share the same parameters dramatically reduces the number of parameters in the model, but most importantly it means that once the CNN has learned to recognize a pattern in one location, it can recognize it in any other location. In contrast, once a regular DNN has learned to recognize a pattern in one location, it can recognize it only in that particular location.
 
  
+### Pooling Layers:
+Goal is to subsample (i.e. shrink) the input image in order to reduce the computational load, memory usage, and number of parameters; thereby limiting the risk of overfitting.
  
+Just like in convolutional layers, each neuron in a pooling layer is connected to the outputs of a limited number of neurons in the previous layers, located with in a small rectangular receptive field, whose size, stride and padding type is needs to be decided as before. 
+
+However, pooling layers has no weights; all it does is aggregate the inputs using an aggregation function such as max or mean. and, it acts spatially, doesn't do anything on depth.
  
+### Hyperparameters:
+- Number of filters
+- Filter heights
+- Width of filters
+- Strides
+- Padding
  
- 
+Use cross-validation to find the right hyperparameters values.
+
+
+---------------------------------------------------------------------------------------------------------
+
+## Some common CNN Architectures:
+
+1. LeNet-5
+2. Alex Net
+3. Google Net
+4. ResNet
+5. VGG
+
+
+
+
+
+
