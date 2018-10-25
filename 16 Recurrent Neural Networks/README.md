@@ -27,3 +27,10 @@ A part of neural network that preserves some state across time step is called a 
 - **Input Sequences:** Padd with zero
 - **Output Sequences:** Define a special output called an end-of-sequence token (EOS token). And, any output past the EOS should be ignored.
 
+### How to train RNNs?
+To train an RNN, the trick is to unroll it through time and then simply use regular backpropagation. This strategy is called *backpropagation through time (BPTT)*
+
+Just like in regular backpropagation, there is a first forward pass through the unrolled network; then the output seq is evaluated using a cost func and the gradients of that cost function are propagated backward through the unrolled network; and finally the model parameters are updated using the gradients computed BPTT. NOTE that gradient flows backward through all the outputs used by the cost function, not just through the final output.
+
+
+
