@@ -77,14 +77,3 @@ A cost function measures how close our predicted values are to the actual values
  2. feature engineering - feeding better features to learning algorithms.
  3. Reduce the constrain on the model, regularization hyperparameter.
 
-
-#### Sources
-1. https://machinelearningmastery.com
-2. https://martechtoday.com/how-machine-learning-works-150366
-3. https://docs.aws.amazon.com/machine-learning/latest/dg/training-ml-models.html
-4. https://www.quora.com/How-can-I-know-if-my-problem-is-linear-or-non-linear-to-choose-the-appropriate-Machine-Learning-algorithm
-5. https://www.quora.com/In-machine-learning-how-can-we-determine-whether-a-problem-is-linear-nonlinear
-6. https://stats.stackexchange.com/questions/182329/how-to-know-whether-the-data-is-linearly-separable
-7. https://towardsdatascience.com/machine-learning-fundamentals-via-linear-regression-41a5d11f5220
-8. https://datascience.stackexchange.com/questions/19099/what-is-weight-and-bias-in-deep-learning
-9. https://www.quora.com/What-is-hypothesis-in-machine-learning
