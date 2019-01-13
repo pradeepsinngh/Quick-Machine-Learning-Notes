@@ -1,3 +1,0 @@
-Before diving into complex data types such as text and image, let’s start with the simplest: numeric data. This may come from a variety of sources: geolocation of a place or a person, the price of a purchase, measurements from a sensor, traffic counts, etc. 
-
-Numeric  data  is  already  in  a  format  that’s  easily  ingestible  by  mathematical  models. This doesn’t mean that feature engineering is no longer necessary, though. Good features  should  not  only  represent  salient  aspects  of  the  data,  but  also  conform  to  the assumptions of the model. Hence, transformations are often necessary. Numeric feature engineering techniques are fundamental. They can be applied whenever raw data is converted into numeric features.
