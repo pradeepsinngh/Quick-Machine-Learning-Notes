@@ -1,0 +1,9 @@
+### Binarization:
+....
+...
+...
+
+
+
+
+### Quantization or Binning:
