@@ -1,6 +1,6 @@
 ## K-Means Clustering
 
-![](K-Means.gif)
+![K-Means](K-Means.gif)
 
 - To begin, we first select a number of classes/groups to use and randomly initialize their respective center points. 
 - The center points are vectors of the same length as each data point vector.
