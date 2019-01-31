@@ -13,3 +13,10 @@ Check out the graphic below for an illustration.
 - At every iteration the sliding window is shifted towards regions of higher density by shifting the center point to the mean of the points within the window (hence the name). The density within the sliding window is proportional to the number of points inside it. Naturally, by shifting to the mean of the points in the window it will gradually move towards areas of higher point density.
 - We continue shifting the sliding window according to the mean until there is no direction at which a shift can accommodate more points inside the kernel.
 - This process is done with many sliding windows until all points lie within a window. When multiple sliding windows overlap the window containing the most points is preserved. The data points are then clustered according to the sliding window in which they reside.
+
+### Advantages:
+- No need to select the number of clusters as mean-shift automatically discovers this. 
+- The fact that the cluster centers converge towards the points of maximum density is also quite desirable as it is quite intuitive to understand and fits well in a naturally data-driven sense.
+
+### Disdvantages:
+- The drawback is that the selection of the window size/radius “r” can be non-trivial.
