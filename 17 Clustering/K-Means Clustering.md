@@ -1,6 +1,6 @@
 ## K-Means Clustering
 
-![K-Means](https://github.com/pradeepsinngh/Machine-Learning-Notes/blob/master/17%20Clustering/k-means.gif)
+![K-Means](https://github.com/pradeepsinngh/Machine-Learning-Notes/blob/master/17%20Clustering/data/k-means.gif)
 
 - To begin, we first select a number of classes/groups to use and randomly initialize their respective center points. 
 - The center points are vectors of the same length as each data point vector.
