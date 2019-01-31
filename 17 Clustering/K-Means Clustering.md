@@ -1,5 +1,7 @@
 ## K-Means Clustering
 
+![](K-Means.gif)
+
 - To begin, we first select a number of classes/groups to use and randomly initialize their respective center points. 
 - The center points are vectors of the same length as each data point vector.
 - Each data point is classified by computing the distance between that point and each group center, and then classifying the point to be in the group whose center is closest to it.
