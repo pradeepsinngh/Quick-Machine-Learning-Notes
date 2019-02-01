@@ -14,6 +14,11 @@
 #### Disadvantage:
 - You have to select how many groups/classes there are. 
 - K-means also starts with a random choice of cluster centers and therefore it may yield different clustering results on different runs of the algorithm. Thus, the results may not be repeatable and lack consistency. 
+- Its naive use of the mean value for the cluster center. We can see why this isn’t the best way of doing things by looking at the image below. On the left hand side it looks quite obvious to the human eye that there are two circular clusters with different radius’ centered at the same mean. K-Means can’t handle this because the mean values of the clusters are a very close together. 
+
+![K-Means Demerits](https://github.com/pradeepsinngh/Machine-Learning-Notes/blob/master/17%20Clustering/data/failure%20cases%20for%20K-Means.png)
+- K-Means also fails in cases where the clusters are not circular, again as a result of using the mean as cluster center.
+
 
 Other cluster methods are more consistent.
 
