@@ -73,4 +73,3 @@ To solve this problem, we should have a memory element/ cell in our model which 
 
 
 
-
