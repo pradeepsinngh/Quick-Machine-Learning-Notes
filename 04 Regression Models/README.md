@@ -15,6 +15,19 @@ In this technique,
 
 Linear Regression establishes a relationship between dependent variable (Y) and one or more independent variables (X) using a best fit straight line (also known as regression line).
 
+It is represented by an equation ```Y=a+b*X + e```, where *a* is intercept, *b* is slope of the line and *e* is error term. This equation can be used to predict the value of target variable based on given predictor variable(s).
+
+The **difference between simple linear regression and multiple linear regression** is that, multiple linear regression has (>1) independent variables, whereas simple linear regression has only 1 independent variable. 
+
+We can evaluate the model performance using the metric [R-square](https://www.analyticsvidhya.com/blog/2019/08/11-important-model-evaluation-error-metrics/). 
+
+### How do we obtain best fit line?
+#### Least Square Method:
+- It is the most common method used for fitting a regression line. 
+- It calculates the best-fit line for the observed data by minimizing the sum of the squares of the vertical deviations from each data point to the line. 
+- Because the deviations are first squared, when added, there is no cancelling out between positive and negative values.
+
+
 ### Performace Measure for Regression Problems:
 1. **Root Mean Square Error(RMSE):**
    - gives idea how much error the system typically makes in its prediction.
