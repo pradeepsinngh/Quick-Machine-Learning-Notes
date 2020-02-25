@@ -107,38 +107,43 @@ Ridge regression solves the multicollinearity problem through shrinkage paramete
 
 ![Ridge Regression](https://github.com/pradeepsinngh/Quick-Machine-Learning-Notes/blob/master/misc/figures/Ridge2.png)
 
-## Lasso Regression:
+In this equation, we have two components:-
+- First one is least square term and 
+- other one is lambda of the summation of β2 (beta- square) where β is the coefficient. This is added to least square term in order to shrink the parameter to have a very low variance.
 
+### Important Notes:
+- The assumptions of this regression is same as least squared regression except normality is not to be assumed.
+- Ridge regression shrinks the value of coefficients but doesn’t reaches zero, which suggests no feature selection feature.
+- This is a regularization method and uses l2 regularization.
+
+
+## Lasso Regression:
+![LAsso Regression](https://github.com/pradeepsinngh/Quick-Machine-Learning-Notes/blob/master/misc/figures/Lasso.png)
+
+*Lasso (Least Absolute Shrinkage and Selection Operator)* also penalizes the absolute size of the regression coefficients. It is capable of reducing the variability and improving the accuracy of linear regression models.  
+
+- Lasso regression differs from ridge regression in a way that it uses absolute values in the penalty function, instead of squares. 
+- This leads to penalizing (or equivalently constraining the sum of the absolute values of the estimates) values which causes some of the parameter estimates to turn out exactly zero. 
+- Larger the penalty applied, further the estimates get shrunk towards absolute zero. This results to variable selection out of given n variables.
+
+#### Important Points:
+- The assumptions of lasso regression is same as least squared regression except normality is not to be assumed
+- Lasso Regression shrinks coefficients to zero (exactly zero), which certainly helps in feature selection
+- Lasso is a regularization method and uses l1 regularization
+- If group of predictors are highly correlated, lasso picks only one of them and shrinks the others to zero.
 
 ## ElasaticNet Regression:
+- ElasticNet is hybrid of Lasso and Ridge Regression techniques. 
+- It is trained with L1 and L2 prior as regularizer. 
+- Elastic-net is useful when there are multiple features which are correlated. 
+- Lasso is likely to pick one of these at random, while elastic-net is likely to pick both.
 
+![LAsso Regression](https://github.com/pradeepsinngh/Quick-Machine-Learning-Notes/blob/master/misc/figures/Elastic_Net.png)
 
-# ---------------------------------------------------
+A practical advantage of trading-off between Lasso and Ridge is that, it allows Elastic-Net to inherit some of Ridge’s stability under rotation.
 
-### Performace Measure for Regression Problems:
-1. **Root Mean Square Error(RMSE):**
-   - gives idea how much error the system typically makes in its prediction.
-   - gives higher weight for larger errors.
-   - corresponds to eculidian norm: also called L2 norm
-   - denoted as ```|| . ||```
+#### Important Points:
+- It encourages group effect in case of highly correlated variables
+- There are no limitations on the number of selected variables
+- It can suffer with double shrinkage
 
-2. **Mean Absolute Error (MAE):**
-   - also called Avg. Absolute Deviation.
-   - also called Manhattan norm, becuase it measure the dist b/w 2 point ina  city if you can only travel along orthogonal 
-   city blocks.
-   - also called L1 norm
-   
-- The higher the norm index, the more it focuses on larger values and neglects the small ones. 
-- This is why RMSE is more sensitive to outliers then MAE.
--  But, when outliers are exponentially rare (like a bell-shaped curve), the RMSE performs very well and is generally preferred.
-
-### Notes on Correlation Measure:
-
-1. Correlation coefficient ranges from -1 to 1. 
-2. When correlation is close to 1, it means there is a strong positive correlation.
-   - For eg: Median house value tends to go up when the median income goes up.
-3. When correlation is close to -1, it means that there is negative correlation.
-   - Foe eg: house prices goes down as you go down the hill.
-4. When correlation is close to 0, it means that there is No linear correlation.
-
-**NOTE:** The correlation coefficient only measures linear correlations. for eg: if X goes up/down, Y goes down/up. It may completely miss the non-linear relationships, eg: if x is close to zero then y generally goes up/down.
