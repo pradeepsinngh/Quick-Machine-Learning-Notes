@@ -2,6 +2,18 @@
 - Regression means, a measure of the relation between one variable (e.g. output) and corresponding values of other variables (eg input variables)
 - We fit a curve / line to the data points, in such a manner that the differences between the distances of data points from the curve or line is minimized.
 
+### Types of Regression:
+- number of independent variables
+- type of dependent variables 
+- shape of regression line
+
+### Linear Regression:
+In this technique, 
+  - the dependent variable is continuous, 
+  - independent variable(s) can be continuous or discrete,
+  - nature of regression line is linear.
+
+Linear Regression establishes a relationship between dependent variable (Y) and one or more independent variables (X) using a best fit straight line (also known as regression line).
 
 ### Performace Measure for Regression Problems:
 1. **Root Mean Square Error(RMSE):**
