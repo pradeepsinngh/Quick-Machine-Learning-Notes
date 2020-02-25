@@ -1,4 +1,7 @@
 # Regression Models
+- Regression means, a measure of the relation between one variable (e.g. output) and corresponding values of other variables (eg input variables)
+- We fit a curve / line to the data points, in such a manner that the differences between the distances of data points from the curve or line is minimized.
+
 
 ### Performace Measure for Regression Problems:
 1. **Root Mean Square Error(RMSE):**
