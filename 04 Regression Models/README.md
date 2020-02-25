@@ -7,6 +7,14 @@
 - type of dependent variables 
 - shape of regression line
 
+1. Linea Regression
+2. Logistic Regression
+3. Polynomial Regression
+4. Stepwise Regression
+5. Ridge Regression
+6. Lasso Regression
+7. ElasticNet Regression
+
 ### Linear Regression:
 In this technique, 
   - the dependent variable is continuous, 
