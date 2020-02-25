@@ -15,7 +15,7 @@
 6. Lasso Regression
 7. ElasticNet Regression
 
-### Linear Regression:
+### 1. Linear Regression:
 In this technique, 
   - the dependent variable is continuous, 
   - independent variable(s) can be continuous or discrete,
@@ -43,7 +43,7 @@ We can evaluate the model performance using the metric [R-square](https://www.an
 - Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable.
 - In case of multiple independent variables, we can go with forward selection, backward elimination and step wise approach for selection of most significant independent variables.
 
-### Logistic Regression:
+### 2. Logistic Regression:
 - Logistic regression is used to find the probability of event=Success and event=Failure. It is used when dependent variable is binary (0/ 1, True/ False, Yes/ No) in nature.
 
 
@@ -63,7 +63,7 @@ Since we are working here with a binomial distribution (dependent variable), we 
 - It requires large sample sizes because maximum likelihood estimates are less powerful at low sample sizes than ordinary least square.
 - The independent variables should not be correlated with each other i.e. no multi collinearity.  
 
-## Polynomial Regression:
+## 3. Polynomial Regression:
 A regression equation is a polynomial regression equation if the power of independent variable is more than 1. The equation below represents a polynomial equation:
 
 ```y = a + b * x^2```
@@ -75,7 +75,7 @@ A regression equation is a polynomial regression equation if the power of indepe
 - Especially look out for curve towards the ends and see whether those shapes and trends make sense. 
 - Higher polynomials can end up producing wierd results on extrapolation.
 
-## Stepwise Regression:
+## 4. Stepwise Regression:
 - This form of regression is used when we deal with multiple independent variables. 
 - In this technique, the selection of independent variables is done with the help of an automatic process, which involves no human intervention.
 
@@ -90,7 +90,7 @@ Some of the most commonly used Stepwise regression methods are listed below:
 
 
 
-## Ridge Regression
+## 5. Ridge Regression
  - Ridge Regression is a technique used when the data suffers from multicollinearity (independent variables are highly correlated). 
  - In multicollinearity, even though the least squares estimates (OLS) are unbiased, their variances are large which deviates the observed value far from the true value. 
  - By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors.
@@ -125,7 +125,7 @@ In this equation, we have two components:-
 - This is a regularization method and uses l2 regularization.
 
 
-## Lasso Regression:
+## 6. Lasso Regression:
 ![LAsso Regression](https://github.com/pradeepsinngh/Quick-Machine-Learning-Notes/blob/master/misc/figures/Lasso.png)
 
 *Lasso (Least Absolute Shrinkage and Selection Operator)* also penalizes the absolute size of the regression coefficients. It is capable of reducing the variability and improving the accuracy of linear regression models.  
@@ -140,7 +140,7 @@ In this equation, we have two components:-
 - Lasso is a regularization method and uses l1 regularization
 - If group of predictors are highly correlated, lasso picks only one of them and shrinks the others to zero.
 
-## ElasaticNet Regression:
+## 7. ElasaticNet Regression:
 - ElasticNet is hybrid of Lasso and Ridge Regression techniques. 
 - It is trained with L1 and L2 prior as regularizer. 
 - Elastic-net is useful when there are multiple features which are correlated. 
